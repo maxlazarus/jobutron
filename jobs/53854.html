@@ -1,0 +1,2493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd"><html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		
+			
+		
+		
+		
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+	<title>
+		MyAccount - Job Postings
+	</title>
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+  
+ 
+  
+ 
+
+
+
+
+<script type="text/javascript">
+	var orbisLocale = "en";
+
+				
+</script>
+
+<link rel="icon" href="/site/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/site/images/favicon.ico" type="image/x-icon">
+
+
+
+
+
+	
+
+	
+		
+		
+			<link href="/core/scripts/jquery/jquery-ui-1.8.18.custom/css/smoothness/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css">
+		
+
+		<script type="text/javascript" src="/core/scripts/jquery/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/core/scripts/jquery/jquery-ui-1.8.18.custom/js/jquery-ui-1.8.18.custom.min.js"></script>
+	
+
+
+
+
+
+
+
+<link href="/core/css/core.css" rel="stylesheet" type="text/css">
+<link href="/site/styles/normal/safari.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+<script type="text/javascript">
+	var i18n = {
+		i14581551: "Are you sure you want to delete this task?",
+		i55453541: "Are you sure you want to delete this note?",
+		i34534531: "Are you sure you want to delete this time-slot?",
+		i98413981: "deleteInterviewer - unsuccessful",
+		i74513741: "ERROR",
+		u71664225: "Delete this group?",
+		s60971652: "Could not add new group - invalid parameters.",
+		a05352565: "ERROR",
+		d76200733: "Columns",
+		w73107591: "Reorder Columns",
+		l43035401: "View Details",
+		q40274238: "View More Details",
+		i74855411: "No Restrictions. Placement must have restrictions to continue.",
+		cl1723834: "Close",
+		a40369725: "SELECT ALL",
+		c53266207: "There has been a communication error with the server(1).  Please try again.",
+		g92510331: "There has been a communication error with the server(2).  Please try again.",
+		x410443028: "There has been a communication error with the server(3).  Please try again.",
+		o312666927: "Alert",
+		q8366135: "OK",
+		e037553076: "Please Wait...",
+		h17743726: "Are you sure?",
+		m536012143: "MAX CHARS",
+		w24268703: "CHARS REMAINING",
+		u93742358: "You have inputed incorrect parameters within the checkboxWidget plugin.",
+		j07234968: "Fetching news feed",
+		i413033843: "News feed unavailable!",
+		s55118689: "Click here for more information",
+		n968294344: "Confirmation"
+	}
+</script>
+<script type="text/javascript" src="/core/scripts/orbis/orbis-152.js"></script>
+<script type="text/javascript" src="/core/scripts/flashobject/flashobject.js"></script>
+
+
+<script type="text/javascript" src="/core/scripts/ckeditor-3.6.3/ckeditor.js"></script>
+<script type="text/javascript" src="/core/scripts/ckeditor-3.6.3/adapters/jquery.js"></script>
+<script type="text/javascript" src="/ckfinder/ckfinder.js"></script>
+
+
+
+	<link type="text/css" rel="stylesheet" href="https://www.ubcengcore.com/core/css/jquery-validate.css"></head><body id="portalBody">
+<script type="text/javascript">
+ 	 var stimedout = false;
+ 	 var keepMeLoggedIn;
+	 	if (keepMeLoggedIn == null || keepMeLoggedIn == undefined) {
+	        if (window.XMLHttpRequest) {
+	        	keepMeLoggedIn = new XMLHttpRequest();
+	        }
+	        else if (window.ActiveXObject) {
+	        	keepMeLoggedIn = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	 }
+	 keepMeLoggedIn.onreadystatechange = function () { };
+ 	 var interruptTimeout = false;
+ 	 var countdownNum = 29;
+ 	 var countdownInterval;
+ 	 var sessionInterval;
+ 	 
+ 	 orbisApp.setUpRegularDialog("#keepMeLoggedInDiv", {"Keep Me Logged In" : keepMeLoggedInClicked}, {width:400});
+ 	 
+	 function sessionTimeoutPopup() {
+		 interruptTimeout = false;
+		 beginCountdown();
+		 if (stimedout == false) {
+			 $("#keepMeLoggedInDiv").dialog("open");
+			 setTimeout ( "sessionTimeoutTimeout()", (30 * 1000));
+		 }
+	 }
+	 
+	 function beginCountdown()
+	 {
+		 countdownInterval = setInterval("countdown()", 1000);
+	 }
+	 
+	 function countdown()
+	 {
+		 $("#secondsLeft").html(countdownNum);
+		 countdownNum--;
+	 }
+	 
+	 function stopCountdown()
+	 {
+		 $("#secondsLeft").html("30");
+		 countdownNum = 29;
+		 clearInterval(countdownInterval);
+	 }
+	 
+	 function gotoMyAccount() {
+		 document.location='/myAccount';
+	 }
+	 
+	 function sessionTimeoutTimeout() {
+	     if (!interruptTimeout) {
+		 	stopCountdown();
+	 		stimedout = true;
+	 		$("span#timeoutMessage").html("Your session has expired. You have been logged out. <br /><a href='/myAccount'>Click here to log in</a>");
+	 		$("#keepMeLoggedInDiv").dialog("option", "buttons", {"Close" : function(){$(this).dialog("close");}});
+	 		keepMeLoggedIn.open('post', '/logMeOut.htm');
+		 	keepMeLoggedIn.send(null);
+	     }
+	 }
+	 
+	 function keepMeLoggedInClicked() {
+		 clearInterval(sessionInterval);
+		 
+	 	 keepMeLoggedIn.open('get', '/keepAlive.htm?rand=' + Math.floor(Math.random()*100000));
+	 	 keepMeLoggedIn.send(null);
+	 	
+	 	$("#keepMeLoggedInDiv").dialog("close");
+	 	sessionInterval = setInterval ( "sessionTimeoutPopup()", (1770 * 1000));
+	 	stopCountdown();
+	 	interruptTimeout = true;
+	 }
+	 $("#keepMeLoggedInDiv").dialog("close");
+	 sessionInterval = setInterval ( "sessionTimeoutPopup()", (1770 * 1000));
+</script><div style="z-index: 1000; outline-width: 0px; outline-style: initial; outline-color: initial; height: auto; width: 400px; display: none; " class="ui-dialog ui-widget ui-widget-content ui-corner-all orbisDialog ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-keepMeLoggedInDiv"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" style="display: none; "><span class="ui-dialog-title" id="ui-dialog-title-keepMeLoggedInDiv">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="keepMeLoggedInDiv" style="width: auto; min-height: 0px; height: 91px; " class="ui-dialog-content ui-widget-content">
+	<table style="width: 100%; height: 100%;">
+		<tbody><tr>
+			<td style="vertical-align: middle; text-align: center;">
+				<span id="timeoutMessage" style="color: red; font-size: 20px;">You will be logged out in <span id="secondsLeft">30</span> seconds.</span>
+			</td>
+		</tr>
+	</tbody></table>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Keep Me Logged In</span></button></div></div></div>
+
+
+<script type="text/javascript">
+				
+	$.ajaxPrefilter(function( options, originalOptions, jqXHR ) { 
+		if ( options.dataType == 'script' || originalOptions.dataType == 'script' ) { 
+		    options.cache= true;
+		} 
+	}); 
+</script>
+	
+
+	
+	
+
+
+
+
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+
+	
+	<div id="wrapper">
+		
+		<!-- BEGIN BOX CONTAINER -->
+		<div class="boxContainer">
+		
+
+
+
+
+				<div class="orbis_headerImgContainer">
+					<a href="/home.htm"><div class="orbis_invisibleContainer"></div></a>
+				</div>
+			<!-- begin MAIN CONTAINER -->
+
+			<div id="orbis_horizTemplate">
+				<div class="horizMenu">
+					
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<div class="menuContainer">
+		<div class="editButtonBox">
+			
+
+  
+ 
+  
+ 
+
+
+
+
+
+	
+
+		</div>
+
+
+
+	<div class="itemsBox">
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<ul id="" style="margin-bottom:0px;">
+		
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/userhome.htm">My Account</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/co-op.htm">Co-op</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/myDocuments.htm">My Documents</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li class="highlight">
+				<div class="highlight">
+					
+						<a href="/myAccount/postings.htm" class="highlight">Job Postings</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/applications.htm">Applications</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/interviews.htm">Interviews</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/rankAndMatch.htm">Rank &amp; Match</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/workTerm1.htm">Work Term</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/appointments.htm">Appointments</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/events.htm">Events</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/resources.htm">Resources</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/logout.htm">Logout</a>
+					
+					
+				</div>
+				
+			</li>
+		
+	</ul>
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+				</div>
+			</div>
+
+			
+
+
+
+
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+<div id="tabbedTemplate">
+	<div class="tabbedMenu">
+		
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<div class="menuContainer">
+		<div class="editButtonBox">
+			
+
+  
+ 
+  
+ 
+
+
+
+
+
+	
+
+		</div>
+
+
+
+	<div class="itemsBox">
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<ul id="" style="margin-bottom:0px;">
+		
+		
+	</ul>
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+	</div>
+	<div class="tabbedMenuContent">
+		
+
+
+
+
+		
+
+
+
+
+
+
+<a name="pageContent"></a> <!-- begintext -->
+
+  
+ 
+  
+ 
+
+
+
+
+<script type="text/javascript">
+	orbisApp.addComponent('jqueryValidate');
+	
+	$.validator.addMethod("noSelected", function(value) {
+	    var pending = 0;
+	    $("input:checkbox[name='studentId']").each(function() {
+	    	if (this.id != "selectAll")
+	    	{
+		    	if (this.checked == true)
+		    	{
+		    	  pending++;
+		    	}
+		    }
+	    });
+		return pending > 0;
+	}, '<LI>Please select one of the students.');
+	
+	var controllerPath = "/myAccount/postings.htm";
+	
+	$(document).ready(function() 
+	{
+		var inputErrorClass = "inputError";
+		
+		
+		
+		$("#selectAll").click(function()				
+		{
+			var checked_status = this.checked;
+			$("input[type=checkbox]").each(function()
+			{
+				this.checked = checked_status;
+			});
+		});					
+	}); 
+</script>
+
+<style type="text/css">
+	label {
+		width: 10em;
+		float: left;
+	}
+	
+	label.error {
+		float: none;
+		color: red;
+		padding-left: .5em;
+		vertical-align: top;
+	}
+	
+	p {
+		clear: both;
+	}
+	
+	.submit {
+		margin-left: 12em;
+	}
+	
+	em {
+		font-weight: bold;
+		padding-right: 1em;
+		vertical-align: top;
+	}
+	
+	.inputError {
+		border: 1px dotted red;
+	}
+	
+	div.row{
+		margin-left: 0px !important;
+	}
+</style>
+
+<div id="">
+	<div class="acrmStyles">
+			
+	
+		
+		<style type="text/css">
+	.jobHeaderLeftHalf{
+		float:left;
+		width:69%;
+	}
+	.jobHeaderRightHalf{
+		float:right;
+		width:30%;
+	}
+</style>
+
+
+	
+
+<div class="jobHeader">
+	
+	<div class="jobHeaderLeftHalf">
+	
+		<div class="jobHeaderTitle">
+			(Job ID: 53854) Energy Project Development Engineering Internship Student
+			<br>
+			
+				TransCanada PipeLines Ltd.
+			
+			
+		</div>
+		<div class="clearFix"></div>
+
+		<table width="100%" border="0" cellspacing="0" cellpadding="10">
+			<tbody><tr>
+				<td width="80%">
+					<table>
+						
+							<tbody><tr>
+								<td>
+									Date Posted:
+									<strong>January 02, 2015 07:00AM </strong>
+								</td>
+							</tr>
+						
+						
+							<tr>
+								<td>
+									Co-op Work Term Posted:
+									<strong>2015 - Summer</strong>
+								</td>
+							</tr>
+						
+						<tr>
+							<td>
+								Application Deadline:
+								<strong>Jan 16, 2015 07:00AM </strong>
+								
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								Application Method:
+								<strong>Online via system</strong>
+							</td>
+						</tr>
+						
+					</tbody></table>
+				</td>
+				
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div class="jobHeaderRightHalf">
+		
+		
+			
+				
+					<div width="95%" id="applyButton" class="largeTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){$('#tabMyApplication').submit();}" role="button" aria-disabled="false" style="width: 95%; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 16px; " buttonrendered="true"><span class="ui-button-text">
+						Apply for this Position
+					</span></div>
+				
+				
+			
+		
+		
+		
+		
+		
+		
+		
+	</div>
+	
+	<div class="clearFix"></div>
+	
+</div>
+
+
+
+		
+		
+
+
+
+	<form id="printPdfDetail" action="/myAccount/postings.htm" method="POST" style="display:none;">
+		<input type="hidden" name="action" value="printPostingStudentView">
+		<input type="hidden" id="postingIdForPrint" name="postingId" value="53854">
+	</form>
+
+
+
+<form id="displayHomeForm" method="post">
+	<input type="hidden" name="action" value="displayHome">
+</form>
+
+
+	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSHpmP__h6k3vXMr2hReNBASYkzfrQaKU&amp;sensor=false" type="text/javascript"></script><script src="https://maps.gstatic.com/maps-api-v3/api/js/19/6/main.js"></script>
+
+<script type="text/javascript">
+	var controllerPath = "/myAccount/postings.htm";
+	
+	$(document).ready(function(){
+		orbisApp.setUpRegularDialog("div#mapDialog", null, {width: 600, height: 625});
+	});
+	
+	function showJobOnMap(jobId)
+	{
+		if($("div#mapDialog").data("loaded"))
+		{
+			$("div#mapDialog").dialog("open");
+		}
+		else
+		{
+			var request = {
+					action : "loadMapDialog",
+					jobId : jobId,
+					rand : Math.floor(Math.random()*100000)
+			};
+			
+			$("div#mapPlaceholder").load(controllerPath, request, function(data, status, xhr){
+				if(orbisApp.checkAjaxResponse(xhr))
+				{
+					$("div#mapDialog").data("loaded", true);
+					$("div#mapDialog").dialog("open");
+				}
+			});
+		}
+	}
+</script>
+
+
+
+<form id="tabMyApplication" method="post">
+	<input type="hidden" name="action" value="displayApply">
+	<input type="hidden" name="postingId" value="53854">
+</form>
+<form id="otherApplication" method="post">
+	<input type="hidden" name="action" value="apply">
+	<input type="hidden" name="postingId" value="53854">
+</form>
+
+
+
+<script type="text/javascript">
+	var controllerPath = "/myAccount/postings.htm";
+
+	function toggleFavouritePosting()
+	{
+		var request = {
+				action : "toggleFavouritePosting",
+				postingId : 53854,
+				rand : Math.floor(Math.random()*100000)
+		};
+		
+		$.post(controllerPath, request, function(data, status, xhr){
+			if(orbisApp.checkAjaxResponse(xhr))
+			{
+				if(data.added)
+				{
+					$("img#postingFavIcon").attr("src", "/core/images/icons/icon-notFavourite.png");
+					$("span#favText").html("Unsave");
+				}
+				else
+				{
+					$("img#postingFavIcon").attr("src", "/core/images/icons/icon-favourite.png");
+					$("span#favText").html("Save");
+				}
+			}
+		}, "json");
+	}
+	
+</script>
+
+
+
+
+	<form id="printPdfDetail" action="/myAccount/postings.htm" method="POST" style="display:none;">
+		<input type="hidden" name="action" value="printPostingStudentView">
+		<input type="hidden" id="postingIdForPrint" name="postingId" value="53854">
+	</form>
+
+
+
+
+
+<form id="backToSearchResultsForm" method="post">
+	<input type="hidden" name="action" value="search">
+</form>
+
+<form id="advancedSearch" method="post">
+	<input type="hidden" name="action" value="displayAdvancedSearch">
+</form>
+
+<div class="jobSection">
+	<div class="attentionBoxTopJobSearchQuick">
+		<div style="text-align: center;">
+			
+			
+			<div width="100px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){$('#advancedSearch').submit();}" role="button" aria-disabled="false" style="width: 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				New Search
+			</span></div>
+			<div width="150px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){orbisApp.displayHome();}" role="button" aria-disabled="false" style="width: 150px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				Job Postings Home
+			</span></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div width="110px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="toggleFavouritePosting" role="button" aria-disabled="false" style="width: 110px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				<span id="favText">Save</span>
+			</span></div>
+			<!-- 
+			<div width="150px" class="mediumTestButton" callback="function(){showJobOnMap(53854)}">
+				Show on Map
+			</div>
+			 -->
+			<div width="100px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){$('#printPdfDetail').submit();}" role="button" aria-disabled="false" style="width: 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				Print
+			</span></div>
+		</div>
+	</div>
+</div>
+
+	
+	
+	
+
+
+
+		
+		
+		
+		
+		<div id="postingDiv" style="display: ">
+			
+
+  
+ 
+  
+ 
+
+
+
+
+			
+			
+			
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			
+				<div class="jobSection">
+	<div class="jobHeaderBlock">
+		JOB POSTING INFORMATION
+		
+	</div>
+	<br>
+
+	
+	<div>
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Position Type:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Co-op Undergraduate Employment
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Start of Workterm:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					May 2015
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Length of Work Term:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					12 months
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Title:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					Energy Project Development Engineering Internship Student
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Location:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					Toronto, Ontario or Calgary, Alberta
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Number of Positions:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					1
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Salary ($):</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					TBD
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Frequency:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Hourly
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Industry:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Transportation Operations
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Company Type:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Private Business
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Description:</strong>
+			
+		</div>
+		<div>
+			
+			
+			
+			
+			
+
+			
+				
+					<p style="text-align: center">
+	<strong>Energy Project Development Engineering Internship Student</strong></p>
+<p>
+	<strong>Location:&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;CA - Toronto, Ontario or Calgary, Alberta<br>
+	<strong>Job Category:&nbsp;&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Engineering; Student Opportunities<br>
+	<strong>Employment Type:&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp; Co-op Student Full-time<br>
+	<strong>Relocation Eligibility:&nbsp;</strong> Domestic Only</p>
+<p>
+	<strong>General Information</strong><br>
+	STUDENT CO-OP/INTERNSHIP OPPORTUNITY: 12-month term, starting May 2015.</p>
+<p>
+	TransCanada is currently looking for a qualified engineering Co-op/internship student to work in the Energy Project Development Engineering team within the Facilities Projects Department.</p>
+<p>
+	The Energy Project Development Engineering team supports energy projects in the development stage. Energy project development involves all technical work required to advance new power generation and transmission opportunities from initial concept (Prospecting Phase) through to final definition (Definition Phase) as required, supporting TransCanada's investment decisions.<br>
+	This involves a wide range of activities including: site due diligence, configuration evaluation, major equipment comparison and selection, contract development and negotiation, plant performance modeling and optimization, and schedule analysis required to support economic evaluation of the opportunity. Other tasks may also be a part of day-to-day work and include: developing the design basis for new projects while encompassing each engineering discipline, reviewing third party engineering work, reviewing specifications, and supporting design queries through implementation.</p>
+<p>
+	Reporting to the Manager of Energy Project Development, the successful candidate will support the assigned Project Manager or Project Engineer in the development of new projects through the prospecting, proposal, and definition phases. The successful candidate will interact with all key internal departments, as well as external stakeholders, including: internal commercial teams, engineering firms, equipment suppliers, government/regulatory agencies, and utility companies.</p>
+<p>
+	Energy projects will typically be high value, new build, acquisition or major refurbishment opportunities throughout North America. Energy projects are active in a wide range of power sectors and technology, including generation (thermal combined cycle, simple cycle), cogeneration (wind, solar, and hydro), and large scale transmission.</p>
+<p>
+	<strong>Responsibilities</strong><br>
+	• Provide project support to multiple development or implementation projects in accordance with TransCanada's Capital Project Management System (CPMS) guidelines;<br>
+	• Represent and coordinate project development and implementation inputs from all relevant areas of Operations, Engineering, Environment, Project Valuations, Business Development as well external agencies and consultants;<br>
+	• Support and help coordinate feasibility studies, capital cost estimates, milestone schedules, development plans, risk analyses, and conceptual and preliminary engineering design work;<br>
+	• Interact effectively with all team members and multiple stakeholders both internally and externally;<br>
+	• Support and help manage development budgets, approvals, schedules, and deliverables;<br>
+	• Document and communicate project development or implementation information to team members and stakeholders;<br>
+	• Work with lead discipline engineers to optimize the development and implementation of projects, delivering the required levels for review and quality control;<br>
+	• Complete performance modeling for new energy projects using a number of different software packages;<br>
+	• Other tasks as required.</p>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Requirements:</strong>
+			
+		</div>
+		<div>
+			
+			
+			
+			
+			
+
+			
+				
+					<p>
+	<strong>Qualifications and Education</strong></p>
+<p>
+	<strong>Qualifications:</strong><br>
+	• Must be enrolled in a co-op/internship program at a recognized post-secondary institution;<br>
+	• Attention to detail and ability to capture and report information accurately;<br>
+	• Ability to apply engineering principles to identify issues, develop solutions, and recommend improvements;<br>
+	• Ability to prioritize and effectively deal with multiple competing demands in a highly dynamic environment to meet tight deadlines;<br>
+	• Business maturity and awareness with topics and matters that are confidential and competitively sensitive;<br>
+	• Ability to work independently and collaboratively with others in a team setting to achieve shared goals;<br>
+	• Self-starter with a proactive approach to problem identification and resolution;<br>
+	• Self-motivated, innovative, and collaborative;<br>
+	• Strong analytical skills, capable of resolving problems independently;<br>
+	• Ability to work well under pressure in a fast-paced environment with changing priorities and circumstances;<br>
+	• Ability and interest in learning and taking on new challenges;<br>
+	• Strong oral and written communication, interpersonal, and presentation skills.</p>
+<p>
+	<strong>Education/Experience:</strong><br>
+	• Previous business, engineering, construction or operations experience with pipelines, compression, oil pumping stations or energy infrastructure would be an asset;<br>
+	• Excellent computer skills and proficiency with Microsoft Office tools (Excel, Visio, and Word).</p>
+<p>
+	Applicants must have legal authorization to work in the country in which the position is based with no restrictions.</p>
+<p>
+	All positions require background screening. Some include criminal and/or credit checks in order to comply with regulations.</p>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Open To All Majors:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Yes
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Start Date:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+					05/04/2015
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>End Date:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+					04/29/2016
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Hours Per Week:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+					40
+
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="clearFix"></div>
+	
+</div>
+			
+			
+			
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			
+				<div class="jobSection">
+	<div class="jobHeaderBlock">
+		APPLICATION INFORMATION
+	</div>
+	<br>
+	<div>
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Application Receipt Procedure:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Online via system
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Application Material Required (i.e. Project examples):</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					Cover Letter, Resume, Unofficial Transcripts
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Additional Application Information  (i.e. Driver's Abstract):</strong>
+			
+		</div>
+		<div>
+			
+			
+			
+			
+			
+
+			
+				
+					<p>
+	TransCanada is an equal opportunity employer.</p>
+<p>
+	<strong>Make what you do matter.</strong></p>
+<p>
+	At TransCanada we dream big, think big and do big things. For over 60 years, we’ve had the vision and scale to deliver big things that matter to the world. From supplying reliable and efficient energy to millions of North Americans with our pipelines, gas storage and power generation facilities, we believe in making big things possible.</p>
+<p>
+	TransCanada is looking for people who are willing to think about the future… and think big. We’re looking for people who are ready to take on the most significant challenges of their careers and define energy infrastructure in North America.</p>
+<p>
+	Thank you for choosing TransCanada in your career search.</p>
+<p>
+	To view all of our job postings or to learn more about TransCanada go to&nbsp; <a href="https://jobs.transcanada.com/">https://jobs.transcanada.com/</a>.</p>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="clearFix"></div>
+</div>
+			
+			
+			
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			
+				<div class="jobSection">
+	<div class="jobHeaderBlock">
+		ORGANIZATION INFORMATION
+	</div>
+	<br>
+	<div>
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Company:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+				TransCanada PipeLines Ltd.
+			
+			
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Division:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+				Calgary
+			
+			
+			
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Website:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+				
+					<a href="http://http://www.transcanada.com" target="_blank">http://www.transcanada.com</a>
+				
+			
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="clearFix"></div>
+</div>
+
+			
+			
+			
+			
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+				
+			
+			
+			
+			
+			
+			
+		</div>
+		<div class="clearFix"></div>
+	</div>
+</div><!-- endtext -->
+
+	</div>
+</div>
+
+			<!-- end MAIN CONTAINER -->
+
+			<!-- begin FOOTER -->
+			<div class="orbis_footerContainer">
+				<div class="orbis_footerCopy">
+					©
+					2015
+					UBC Engineering Co-op Program
+				</div>
+				<div class="orbis_footerPrivacy">
+					
+						
+							<a href="/myAccount">MyAccount</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="/logout.htm">Log Out</a>
+						
+						
+					
+				</div>
+				<div class="clearFix"></div>
+			</div>
+			<!-- end FOOTER -->
+
+		</div>
+		<!-- end BOX CONTAINER -->
+
+		<div style="text-align: center">
+			<div class="logoPoweredByContainer">
+				<a class="logoPoweredBy" href="http://www.orbiscommunications.com" target="_blank">Powered by Orbis Career / Co-op Portal
+					Professional v2</a>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	
+
+
+<div style="z-index: 1000; outline-width: 0px; outline-style: initial; outline-color: initial; height: auto; width: 600px; display: none; " class="ui-dialog ui-widget ui-widget-content ui-corner-all orbisDialog ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-mapDialog"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-mapDialog">Job Location</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="mapDialog" style="width: auto; min-height: 0px; height: 532px; " class="ui-dialog-content ui-widget-content">
+	<div id="mapPlaceholder">
+	</div>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Close</span></button></div></div></div></body></html>

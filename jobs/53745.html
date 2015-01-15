@@ -1,0 +1,2401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd"><html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		
+			
+		
+		
+		
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+	<title>
+		MyAccount - Job Postings
+	</title>
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+  
+ 
+  
+ 
+
+
+
+
+<script type="text/javascript">
+	var orbisLocale = "en";
+
+				
+</script>
+
+<link rel="icon" href="/site/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/site/images/favicon.ico" type="image/x-icon">
+
+
+
+
+
+	
+
+	
+		
+		
+			<link href="/core/scripts/jquery/jquery-ui-1.8.18.custom/css/smoothness/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css">
+		
+
+		<script type="text/javascript" src="/core/scripts/jquery/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/core/scripts/jquery/jquery-ui-1.8.18.custom/js/jquery-ui-1.8.18.custom.min.js"></script>
+	
+
+
+
+
+
+
+
+<link href="/core/css/core.css" rel="stylesheet" type="text/css">
+<link href="/site/styles/normal/safari.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+<script type="text/javascript">
+	var i18n = {
+		i14581551: "Are you sure you want to delete this task?",
+		i55453541: "Are you sure you want to delete this note?",
+		i34534531: "Are you sure you want to delete this time-slot?",
+		i98413981: "deleteInterviewer - unsuccessful",
+		i74513741: "ERROR",
+		u71664225: "Delete this group?",
+		s60971652: "Could not add new group - invalid parameters.",
+		a05352565: "ERROR",
+		d76200733: "Columns",
+		w73107591: "Reorder Columns",
+		l43035401: "View Details",
+		q40274238: "View More Details",
+		i74855411: "No Restrictions. Placement must have restrictions to continue.",
+		cl1723834: "Close",
+		a40369725: "SELECT ALL",
+		c53266207: "There has been a communication error with the server(1).  Please try again.",
+		g92510331: "There has been a communication error with the server(2).  Please try again.",
+		x410443028: "There has been a communication error with the server(3).  Please try again.",
+		o312666927: "Alert",
+		q8366135: "OK",
+		e037553076: "Please Wait...",
+		h17743726: "Are you sure?",
+		m536012143: "MAX CHARS",
+		w24268703: "CHARS REMAINING",
+		u93742358: "You have inputed incorrect parameters within the checkboxWidget plugin.",
+		j07234968: "Fetching news feed",
+		i413033843: "News feed unavailable!",
+		s55118689: "Click here for more information",
+		n968294344: "Confirmation"
+	}
+</script>
+<script type="text/javascript" src="/core/scripts/orbis/orbis-152.js"></script>
+<script type="text/javascript" src="/core/scripts/flashobject/flashobject.js"></script>
+
+
+<script type="text/javascript" src="/core/scripts/ckeditor-3.6.3/ckeditor.js"></script>
+<script type="text/javascript" src="/core/scripts/ckeditor-3.6.3/adapters/jquery.js"></script>
+<script type="text/javascript" src="/ckfinder/ckfinder.js"></script>
+
+
+
+	<link type="text/css" rel="stylesheet" href="https://www.ubcengcore.com/core/css/jquery-validate.css"></head><body id="portalBody">
+<script type="text/javascript">
+ 	 var stimedout = false;
+ 	 var keepMeLoggedIn;
+	 	if (keepMeLoggedIn == null || keepMeLoggedIn == undefined) {
+	        if (window.XMLHttpRequest) {
+	        	keepMeLoggedIn = new XMLHttpRequest();
+	        }
+	        else if (window.ActiveXObject) {
+	        	keepMeLoggedIn = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	 }
+	 keepMeLoggedIn.onreadystatechange = function () { };
+ 	 var interruptTimeout = false;
+ 	 var countdownNum = 29;
+ 	 var countdownInterval;
+ 	 var sessionInterval;
+ 	 
+ 	 orbisApp.setUpRegularDialog("#keepMeLoggedInDiv", {"Keep Me Logged In" : keepMeLoggedInClicked}, {width:400});
+ 	 
+	 function sessionTimeoutPopup() {
+		 interruptTimeout = false;
+		 beginCountdown();
+		 if (stimedout == false) {
+			 $("#keepMeLoggedInDiv").dialog("open");
+			 setTimeout ( "sessionTimeoutTimeout()", (30 * 1000));
+		 }
+	 }
+	 
+	 function beginCountdown()
+	 {
+		 countdownInterval = setInterval("countdown()", 1000);
+	 }
+	 
+	 function countdown()
+	 {
+		 $("#secondsLeft").html(countdownNum);
+		 countdownNum--;
+	 }
+	 
+	 function stopCountdown()
+	 {
+		 $("#secondsLeft").html("30");
+		 countdownNum = 29;
+		 clearInterval(countdownInterval);
+	 }
+	 
+	 function gotoMyAccount() {
+		 document.location='/myAccount';
+	 }
+	 
+	 function sessionTimeoutTimeout() {
+	     if (!interruptTimeout) {
+		 	stopCountdown();
+	 		stimedout = true;
+	 		$("span#timeoutMessage").html("Your session has expired. You have been logged out. <br /><a href='/myAccount'>Click here to log in</a>");
+	 		$("#keepMeLoggedInDiv").dialog("option", "buttons", {"Close" : function(){$(this).dialog("close");}});
+	 		keepMeLoggedIn.open('post', '/logMeOut.htm');
+		 	keepMeLoggedIn.send(null);
+	     }
+	 }
+	 
+	 function keepMeLoggedInClicked() {
+		 clearInterval(sessionInterval);
+		 
+	 	 keepMeLoggedIn.open('get', '/keepAlive.htm?rand=' + Math.floor(Math.random()*100000));
+	 	 keepMeLoggedIn.send(null);
+	 	
+	 	$("#keepMeLoggedInDiv").dialog("close");
+	 	sessionInterval = setInterval ( "sessionTimeoutPopup()", (1770 * 1000));
+	 	stopCountdown();
+	 	interruptTimeout = true;
+	 }
+	 $("#keepMeLoggedInDiv").dialog("close");
+	 sessionInterval = setInterval ( "sessionTimeoutPopup()", (1770 * 1000));
+</script><div style="z-index: 1000; outline-width: 0px; outline-style: initial; outline-color: initial; height: auto; width: 400px; display: none; " class="ui-dialog ui-widget ui-widget-content ui-corner-all orbisDialog ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-keepMeLoggedInDiv"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" style="display: none; "><span class="ui-dialog-title" id="ui-dialog-title-keepMeLoggedInDiv">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="keepMeLoggedInDiv" style="width: auto; min-height: 0px; height: 91px; " class="ui-dialog-content ui-widget-content">
+	<table style="width: 100%; height: 100%;">
+		<tbody><tr>
+			<td style="vertical-align: middle; text-align: center;">
+				<span id="timeoutMessage" style="color: red; font-size: 20px;">You will be logged out in <span id="secondsLeft">30</span> seconds.</span>
+			</td>
+		</tr>
+	</tbody></table>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Keep Me Logged In</span></button></div></div></div>
+
+
+<script type="text/javascript">
+				
+	$.ajaxPrefilter(function( options, originalOptions, jqXHR ) { 
+		if ( options.dataType == 'script' || originalOptions.dataType == 'script' ) { 
+		    options.cache= true;
+		} 
+	}); 
+</script>
+	
+
+	
+	
+
+
+
+
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+
+	
+	<div id="wrapper">
+		
+		<!-- BEGIN BOX CONTAINER -->
+		<div class="boxContainer">
+		
+
+
+
+
+				<div class="orbis_headerImgContainer">
+					<a href="/home.htm"><div class="orbis_invisibleContainer"></div></a>
+				</div>
+			<!-- begin MAIN CONTAINER -->
+
+			<div id="orbis_horizTemplate">
+				<div class="horizMenu">
+					
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<div class="menuContainer">
+		<div class="editButtonBox">
+			
+
+  
+ 
+  
+ 
+
+
+
+
+
+	
+
+		</div>
+
+
+
+	<div class="itemsBox">
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<ul id="" style="margin-bottom:0px;">
+		
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/userhome.htm">My Account</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/co-op.htm">Co-op</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/myDocuments.htm">My Documents</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li class="highlight">
+				<div class="highlight">
+					
+						<a href="/myAccount/postings.htm" class="highlight">Job Postings</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/applications.htm">Applications</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/interviews.htm">Interviews</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/rankAndMatch.htm">Rank &amp; Match</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/workTerm1.htm">Work Term</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/appointments.htm">Appointments</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/events.htm">Events</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/myAccount/resources.htm">Resources</a>
+					
+					
+				</div>
+				
+			</li>
+		
+			<li>
+				<div>
+					
+						<a href="/logout.htm">Logout</a>
+					
+					
+				</div>
+				
+			</li>
+		
+	</ul>
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+				</div>
+			</div>
+
+			
+
+
+
+
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+<div id="tabbedTemplate">
+	<div class="tabbedMenu">
+		
+		
+
+
+
+
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<div class="menuContainer">
+		<div class="editButtonBox">
+			
+
+  
+ 
+  
+ 
+
+
+
+
+
+	
+
+		</div>
+
+
+
+	<div class="itemsBox">
+
+
+
+
+  
+ 
+  
+ 
+
+
+
+
+
+	<ul id="" style="margin-bottom:0px;">
+		
+		
+	</ul>
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+	</div>
+	<div class="tabbedMenuContent">
+		
+
+
+
+
+		
+
+
+
+
+
+
+<a name="pageContent"></a> <!-- begintext -->
+
+  
+ 
+  
+ 
+
+
+
+
+<script type="text/javascript">
+	orbisApp.addComponent('jqueryValidate');
+	
+	$.validator.addMethod("noSelected", function(value) {
+	    var pending = 0;
+	    $("input:checkbox[name='studentId']").each(function() {
+	    	if (this.id != "selectAll")
+	    	{
+		    	if (this.checked == true)
+		    	{
+		    	  pending++;
+		    	}
+		    }
+	    });
+		return pending > 0;
+	}, '<LI>Please select one of the students.');
+	
+	var controllerPath = "/myAccount/postings.htm";
+	
+	$(document).ready(function() 
+	{
+		var inputErrorClass = "inputError";
+		
+		
+		
+		$("#selectAll").click(function()				
+		{
+			var checked_status = this.checked;
+			$("input[type=checkbox]").each(function()
+			{
+				this.checked = checked_status;
+			});
+		});					
+	}); 
+</script>
+
+<style type="text/css">
+	label {
+		width: 10em;
+		float: left;
+	}
+	
+	label.error {
+		float: none;
+		color: red;
+		padding-left: .5em;
+		vertical-align: top;
+	}
+	
+	p {
+		clear: both;
+	}
+	
+	.submit {
+		margin-left: 12em;
+	}
+	
+	em {
+		font-weight: bold;
+		padding-right: 1em;
+		vertical-align: top;
+	}
+	
+	.inputError {
+		border: 1px dotted red;
+	}
+	
+	div.row{
+		margin-left: 0px !important;
+	}
+</style>
+
+<div id="">
+	<div class="acrmStyles">
+			
+	
+		
+		<style type="text/css">
+	.jobHeaderLeftHalf{
+		float:left;
+		width:69%;
+	}
+	.jobHeaderRightHalf{
+		float:right;
+		width:30%;
+	}
+</style>
+
+
+	
+
+<div class="jobHeader">
+	
+	<div class="jobHeaderLeftHalf">
+	
+		<div class="jobHeaderTitle">
+			(Job ID: 53745) Technology Analyst Internship
+			<br>
+			
+				Accenture
+			
+			
+		</div>
+		<div class="clearFix"></div>
+
+		<table width="100%" border="0" cellspacing="0" cellpadding="10">
+			<tbody><tr>
+				<td width="80%">
+					<table>
+						
+							<tbody><tr>
+								<td>
+									Date Posted:
+									<strong>January 02, 2015 07:00AM </strong>
+								</td>
+							</tr>
+						
+						
+							<tr>
+								<td>
+									Co-op Work Term Posted:
+									<strong>2015 - Summer</strong>
+								</td>
+							</tr>
+						
+						<tr>
+							<td>
+								Application Deadline:
+								<strong>Jan 19, 2015 07:00AM </strong>
+								
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								Application Method:
+								<strong>Employer Website</strong>
+							</td>
+						</tr>
+						
+					</tbody></table>
+				</td>
+				
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div class="jobHeaderRightHalf">
+		
+		
+			
+				
+				
+				 	<div width="95%" id="applyButton" class="largeTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){$('#otherApplication').submit();}" role="button" aria-disabled="false" style="width: 95%; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 16px; " buttonrendered="true"><span class="ui-button-text">
+				 		I intend to apply for this position
+				 	</span></div>
+				
+			
+		
+		
+		
+		
+		
+		
+		
+	</div>
+	
+	<div class="clearFix"></div>
+	
+</div>
+
+
+
+		
+		
+
+
+
+	<form id="printPdfDetail" action="/myAccount/postings.htm" method="POST" style="display:none;">
+		<input type="hidden" name="action" value="printPostingStudentView">
+		<input type="hidden" id="postingIdForPrint" name="postingId" value="53745">
+	</form>
+
+
+
+<form id="displayHomeForm" method="post">
+	<input type="hidden" name="action" value="displayHome">
+</form>
+
+
+	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSHpmP__h6k3vXMr2hReNBASYkzfrQaKU&amp;sensor=false" type="text/javascript"></script><script src="https://maps.gstatic.com/maps-api-v3/api/js/19/6/main.js"></script>
+
+<script type="text/javascript">
+	var controllerPath = "/myAccount/postings.htm";
+	
+	$(document).ready(function(){
+		orbisApp.setUpRegularDialog("div#mapDialog", null, {width: 600, height: 625});
+	});
+	
+	function showJobOnMap(jobId)
+	{
+		if($("div#mapDialog").data("loaded"))
+		{
+			$("div#mapDialog").dialog("open");
+		}
+		else
+		{
+			var request = {
+					action : "loadMapDialog",
+					jobId : jobId,
+					rand : Math.floor(Math.random()*100000)
+			};
+			
+			$("div#mapPlaceholder").load(controllerPath, request, function(data, status, xhr){
+				if(orbisApp.checkAjaxResponse(xhr))
+				{
+					$("div#mapDialog").data("loaded", true);
+					$("div#mapDialog").dialog("open");
+				}
+			});
+		}
+	}
+</script>
+
+
+
+<form id="tabMyApplication" method="post">
+	<input type="hidden" name="action" value="displayApply">
+	<input type="hidden" name="postingId" value="53745">
+</form>
+<form id="otherApplication" method="post">
+	<input type="hidden" name="action" value="apply">
+	<input type="hidden" name="postingId" value="53745">
+</form>
+
+
+
+<script type="text/javascript">
+	var controllerPath = "/myAccount/postings.htm";
+
+	function toggleFavouritePosting()
+	{
+		var request = {
+				action : "toggleFavouritePosting",
+				postingId : 53745,
+				rand : Math.floor(Math.random()*100000)
+		};
+		
+		$.post(controllerPath, request, function(data, status, xhr){
+			if(orbisApp.checkAjaxResponse(xhr))
+			{
+				if(data.added)
+				{
+					$("img#postingFavIcon").attr("src", "/core/images/icons/icon-notFavourite.png");
+					$("span#favText").html("Unsave");
+				}
+				else
+				{
+					$("img#postingFavIcon").attr("src", "/core/images/icons/icon-favourite.png");
+					$("span#favText").html("Save");
+				}
+			}
+		}, "json");
+	}
+	
+</script>
+
+
+
+
+	<form id="printPdfDetail" action="/myAccount/postings.htm" method="POST" style="display:none;">
+		<input type="hidden" name="action" value="printPostingStudentView">
+		<input type="hidden" id="postingIdForPrint" name="postingId" value="53745">
+	</form>
+
+
+
+
+
+<form id="backToSearchResultsForm" method="post">
+	<input type="hidden" name="action" value="search">
+</form>
+
+<form id="advancedSearch" method="post">
+	<input type="hidden" name="action" value="displayAdvancedSearch">
+</form>
+
+<div class="jobSection">
+	<div class="attentionBoxTopJobSearchQuick">
+		<div style="text-align: center;">
+			
+			
+			<div width="100px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){$('#advancedSearch').submit();}" role="button" aria-disabled="false" style="width: 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				New Search
+			</span></div>
+			<div width="150px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){orbisApp.displayHome();}" role="button" aria-disabled="false" style="width: 150px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				Job Postings Home
+			</span></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div width="110px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="toggleFavouritePosting" role="button" aria-disabled="false" style="width: 110px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				<span id="favText">Save</span>
+			</span></div>
+			<!-- 
+			<div width="150px" class="mediumTestButton" callback="function(){showJobOnMap(53745)}">
+				Show on Map
+			</div>
+			 -->
+			<div width="100px" class="mediumTestButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" callback="function(){$('#printPdfDetail').submit();}" role="button" aria-disabled="false" style="width: 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; font-weight: bold; font-size: 12px; " buttonrendered="true"><span class="ui-button-text">
+				Print
+			</span></div>
+		</div>
+	</div>
+</div>
+
+	
+	
+	
+
+
+
+		
+		
+		
+		
+		<div id="postingDiv" style="display: ">
+			
+
+  
+ 
+  
+ 
+
+
+
+
+			
+			
+			
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			
+				<div class="jobSection">
+	<div class="jobHeaderBlock">
+		JOB POSTING INFORMATION
+		
+	</div>
+	<br>
+
+	
+	<div>
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Position Type:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Both Undergraduate and Graduate
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Start of Workterm:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					May 2015
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Length of Work Term:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					4 months
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Title:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					Technology Analyst Internship
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Location:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					Calgary or Toronto
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Number of Positions:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					2
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Salary ($):</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					TBD
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Frequency:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Monthly
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Description:</strong>
+			
+		</div>
+		<div>
+			
+			
+			
+			
+			
+
+			
+				
+					<p>
+	Accenture Technology Analyst Intern – Summer 2015</p>
+<p>
+	Bring your talent and passion to a global organization at the forefront of business, technology and innovation. At Accenture, we appreciate that you have worked hard for your degree. We invite you to discover how great you can be as you put your degree to work delivering tangible value for some of the world’s most prestigious organizations. Join our team and you will collaborate with diverse, talented colleagues and leaders who support your success. Along the way, our industry-leading training and development will assist you in sharpening your skills, as you build an extraordinary career.<br>
+	At Accenture, our consulting teams combine technology, digital and business operations expertise to envision, design and deliver the end-to-end solutions that our clients—the world’s top organizations—need to become high-performance businesses and governments. We mobilize the right people, skills, alliances and technologies to solve complex technology problems and deliver innovative results.<br>
+	Working with Accenture, you may deliver everything from point solutions for a single business function to large complex systems integration installations spanning multiple businesses and functions, to unleashing the power of digital to drive growth, create new sources of value and transform business.</p>
+<p>
+	Responsibilities<br>
+	As an Accenture analyst intern, you will have the opportunity to work on complex technology and business projects across a wide range of fields and industries for some of the world’s leading companies and government agencies. Depending on your background, interests and Accenture business need, you will be aligned to a group that will allow you to enhance your skills and grow your career as you take on challenges to provide functional advice, deliver technology innovation, and design and implement solutions that support our clients’ business and IT imperatives. We have a number of challenging and rewarding technology career paths available, including:<br>
+	Operating Groups: Financial Services, Products, Resources, Health &amp; Public Services, and Communication, Media &amp; Technology<br>
+	Accenture Technology: Oracle, SAP, Technology Architecture, Emerging Technology Platforms, Emerging Technology Innovation<br>
+	Accenture Digital: Big Data &amp; Analytics, eCommerce, Content Management, Video &amp; Marketing, Mobile Apps &amp; Devices<br>
+	Accenture Operations: Infrastructure, Security</p>
+<p>
+	Your specific responsibilities will vary based on your alignment, but you may find yourself:<br>
+	Developing innovative answers to complex business and IT challenges<br>
+	Designing a next generation eCommerce platform or content management system<br>
+	Helping a client develop analytics and put their data to work for their business and their customers<br>
+	Developing a mobile app as part of a client’s strategy to market to and serve customers anywhere on any device<br>
+	Focusing on technical architecture, delivery excellence, program management and specialist technology areas<br>
+	Building a common set of technology capabilities, across assessment, planning, design and implementation<br>
+	Modernizing and driving costs from complex multi-national IT infrastructures<br>
+	Helping clients design next generation IT architectures to meet their ever changing business needs<br>
+	Identifying client’s vulnerabilities and designing protection systems to safeguard their intellectual property<br>
+	Projecting 3 to 5 years ahead to forecast business needs using cutting edge technology to present innovative solutions<br>
+	Developing a broad set of technology skills, i.e.: SAP, Oracle, SOA, Mobility, Open Source or technology architecture<br>
+	Analyzing/documenting current processes and technologies, contributing through to the delivery/ integration of new solutions<br>
+	Designing and testing new business processes, capabilities, and technologies<br>
+	Leveraging existing and newly developed programming skills to build portions of client applications</p>
+<p>
+	Paid internships last 10 - 12 weeks and typically begin in late-May/early-June and end in mid-August /early-September. Rising Senior Interns attend a three-day leadership conference in the Chicago area with all Accenture interns from across North America.</p>
+<p>
+	Accenture is a global management consulting, technology services and outsourcing company, with more than 305,000 people serving clients in more than 120 countries. Combining unparalleled experience, comprehensive capabilities across all industries and business functions, and extensive research on the world’s most successful companies, Accenture collaborates with clients to help them become high-performance businesses and governments. The company generated net revenues of US$30.0　billion for the fiscal year ended Aug. 31, 2014. Its home page is www.accenture.com</p>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Job Requirements:</strong>
+			
+		</div>
+		<div>
+			
+			
+			
+			
+			
+
+			
+				
+					<p>
+	Basic Qualifications</p>
+<p>
+	Bachelor’s degree or Master’s degree (with a graduation date between December 31, 2015 and August 31, 2016)<br>
+	TN Visa Eligible<br>
+	Ability to meet client travel requirements, when applicable</p>
+<p>
+	Preferred Qualifications<br>
+	3.0 or higher cumulative (overall) GPA<br>
+	Our preferred majors are: Engineering (all disciplines) , Computer Science / Computer Engineering, Information Systems / Decision Sciences , Mathematics / Statistics / Sciences, Business with IT concentration<br>
+	Project-based internship experience at a leading company, not-for-profit or government entity<br>
+	Coursework/work experience with programming languages such as C, C++, Java, scripting languages(Perl/Python/Ruby) or similar<br>
+	Demonstrated leadership in professional setting; either military or civilian<br>
+	Demonstrated teamwork and collaboration in a professional setting; either military or civilian</p>
+<p>
+	Other Professional Skill Requirements and Qualifications<br>
+	A track record of outstanding academic performance<br>
+	Eagerness to contribute in a team-oriented environment<br>
+	Leadership position(s) in school or extracurricular activity<br>
+	Ability to work creatively and analytically in a problem-solving environment<br>
+	Ability to meet client travel requirements, when applicable<br>
+	Ability to translate vision statements and abstract concepts into tangible assets or architectures<br>
+	Ability to learn new technologies quickly<br>
+	Excellent leadership, communication (written and oral) and interpersonal skills</p>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Open To All Majors:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					No
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Targeted Co-op Programs:</strong>
+			
+		</div>
+		<div class="col2">
+			
+				
+
+  
+ 
+  
+ 
+
+
+
+
+<div id="clustersProgramsDiv">
+	
+		<div><strong>Targeted Clusters</strong></div>
+		
+				All Programs<br>
+		
+		<br>
+	
+	<div><strong>Targeted Programs</strong></div>
+	
+		Computer<br>
+	
+		Electrical<br>
+	
+		Integrated<br>
+	
+		Master of Applied Science in Electrical &amp; Computer<br>
+	
+		Master of Applied Science Okanagan in Electrical<br>
+	
+		Master of Engineering Computer<br>
+	
+		Master of Engineering Electrical<br>
+	
+		Master of Engineering Okanagan in Electrical<br>
+	
+		UBC Okanagan<br>
+	
+		UBC Okanagan Electrical<br>
+	
+</div>
+			
+			
+			
+			
+			
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Hours Per Week:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+					0
+
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="clearFix"></div>
+	
+</div>
+			
+			
+			
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+					
+				
+			
+				
+			
+				
+					
+				
+			
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			
+				<div class="jobSection">
+	<div class="jobHeaderBlock">
+		APPLICATION INFORMATION
+	</div>
+	<br>
+	<div>
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Application Receipt Procedure:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+				
+				
+				
+				
+					Employer Website
+
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>If by Website, go to:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+			
+
+			
+				
+					http://careers.accenture.com/ca-en/jobs/Pages/jobsearch.aspx?keyword=summer%202015
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Additional Application Information  (i.e. Driver's Abstract):</strong>
+			
+		</div>
+		<div>
+			
+			
+			
+			
+			
+
+			
+				
+					<p>
+	How to Apply<br>
+	Apply via your campus career center. Instructions for applying to the Accenture Careers Website will be posted on your campus career center soon. In addition to your campus center resume drop, you must complete an online application by Friday, January 16th EST to be considered for an interview.<br>
+	<br>
+	Successful applications will include a cover letter, resume and transcripts from your undergraduate education, and graduate program (if applicable). Failure to include all documents may result in your application being removed from the process. Candidates must be able to travel and work in the US on client projects.<br>
+	<br>
+	Accenture recruits for entry level positions in several groups across strategy, digital, technology, operations and industry. We will work to align you with the appropriate group based on your background, qualifications, experience, interest and business demand.<br>
+	<br>
+	Candidates who are currently employed by a client of Accenture or an affiliated Accenture business may not be eligible for consideration.<br>
+	<br>
+	Accenture does not discriminate on the basis of race, religion, color, sex, age, non-disqualifying physical or mental disability, national origin, sexual orientation, gender identity or expression, or any other basis covered by local law. Accenture is committed to providing veteran employment opportunities to our service men and women.</p>
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="clearFix"></div>
+</div>
+			
+			
+			
+			
+				
+					
+				
+			
+				
+					
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			
+				<div class="jobSection">
+	<div class="jobHeaderBlock">
+		ORGANIZATION INFORMATION
+	</div>
+	<br>
+	<div>
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Company:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+			
+				Accenture
+			
+			
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+				
+	<div class="row">
+		<div class="col1">
+			
+				<strong>Division:</strong>
+			
+		</div>
+		<div class="col2">
+			
+			
+			
+				Default Division
+			
+			
+			
+
+			
+		</div>
+	</div>
+	<br>
+
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="clearFix"></div>
+</div>
+
+			
+			
+			
+			
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+				
+			
+			
+			
+			
+			
+			
+		</div>
+		<div class="clearFix"></div>
+	</div>
+</div><!-- endtext -->
+
+	</div>
+</div>
+
+			<!-- end MAIN CONTAINER -->
+
+			<!-- begin FOOTER -->
+			<div class="orbis_footerContainer">
+				<div class="orbis_footerCopy">
+					©
+					2015
+					UBC Engineering Co-op Program
+				</div>
+				<div class="orbis_footerPrivacy">
+					
+						
+							<a href="/myAccount">MyAccount</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="/logout.htm">Log Out</a>
+						
+						
+					
+				</div>
+				<div class="clearFix"></div>
+			</div>
+			<!-- end FOOTER -->
+
+		</div>
+		<!-- end BOX CONTAINER -->
+
+		<div style="text-align: center">
+			<div class="logoPoweredByContainer">
+				<a class="logoPoweredBy" href="http://www.orbiscommunications.com" target="_blank">Powered by Orbis Career / Co-op Portal
+					Professional v2</a>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	
+
+
+<div style="z-index: 1000; outline-width: 0px; outline-style: initial; outline-color: initial; height: auto; width: 600px; display: none; " class="ui-dialog ui-widget ui-widget-content ui-corner-all orbisDialog ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-mapDialog"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-mapDialog">Job Location</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="mapDialog" style="width: auto; min-height: 0px; height: 532px; " class="ui-dialog-content ui-widget-content">
+	<div id="mapPlaceholder">
+	</div>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Close</span></button></div></div></div></body></html>
