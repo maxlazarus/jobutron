@@ -1,7 +1,7 @@
 # jobulator
 Utility developed for scraping employment postings
 
--Install Selenium then<br>
+-Install Selenium<br>
 -Change password and username in password_handler.py<br>
 -python web_functions.py
 
