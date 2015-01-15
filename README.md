@@ -1,7 +1,11 @@
 # jobulator
 Utility developed for scraping employment postings
 
-Installing Selenium then running python web_functions.py should do the trick
+-Install Selenium then
+
+-Change password and username in password_handler.py
+
+-python web_functions.py
 
 Could not be possible without Selenium Webdriver
   http://docs.seleniumhq.org/projects/webdriver/
