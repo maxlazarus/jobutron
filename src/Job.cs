@@ -19,7 +19,10 @@ namespace jobulator {
 			}
 		}
 		public string Get(string a) {
-			return categories [a].ToString ();
+			if (Check (a))
+				return categories [a].ToString ();
+			else
+				return "";
 		}
 		public bool Check(string a) {
 			return categories.ContainsKey (a);

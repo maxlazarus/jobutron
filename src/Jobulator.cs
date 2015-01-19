@@ -10,13 +10,57 @@ namespace jobulator {
 		public Jobulator () {}
 
 		public static void Main() {
-
+		
 			/*
-			var l1 = getJobsFrom ("html");
+			var l1 = getJobsFrom ("html", 500);
 			foreach (Job j in l1)
 				j.WriteJSON ();
 				*/
-			var jobs = getJobsFrom ("json");
+			var jobs = getJobsFrom ("json", 500);
+
+			//GenerateWordList ();
+
+			foreach (Job j in jobs) {
+				if (
+					(
+						j.Get ("job_location").ToLower().Contains ("vancouver") |
+						j.Get ("job_location").ToLower().Contains ("burnaby") |
+						j.Get ("job_location").ToLower().Contains ("richmond")
+					) && (
+						j.Get("application_deadline").ToLower().Contains("19")
+					)
+				) {
+					Console.WriteLine ("Generating cover letter for position " + j.Get ("id"));
+					CoverLetter cl = new CoverLetter (j);
+					cl.printDOCX ();
+				}
+			}
+
+			//Console.WriteLine ("# of html files = "l1.Count + ", # of JSON files = " + l2.Count);
+
+			//StartGUI ();
+		}
+		public static List<Job> getJobsFrom(string fileType, int limit) {
+			var jobList = new List<Job> ();
+
+			int i = 1;
+			var jobs = FileHandler.getFileNames (fileType);
+			foreach (string s in jobs) {
+				if (i >= limit)
+					break;
+				//Console.Clear ();
+				Console.Write ("Converting job " + i++ + " of " + jobs.Count + Environment.NewLine);
+				var name = Path.GetFileName(s);
+				string id = System.Text.RegularExpressions.Regex.Replace (name, "\\..*", "");
+				Job j = new Job ("test");
+				if(fileType.ToLower() == "html")
+					jobList.Add (j = Job.fromHTML(id));
+				if(fileType.ToLower() == "json")
+					jobList.Add (Job.fromJSON(id));
+			}
+			return jobList;
+		}
+		public static void GenerateWordList(List<Job> jobs){
 			var wordFrequency = new Dictionary<string, int> ();
 			var list = new List<KeyValuePair<string, int>> ();
 
@@ -41,41 +85,6 @@ namespace jobulator {
 				output += kvp.Key + " " + kvp.Value + "<br>" + Environment.NewLine;
 			}
 			FileHandler.Write (output, "wordlist.txt");
-			/*
-			foreach (Job j in jobs) {
-				if (j.Get ("job_location").ToLower().Contains ("vancouver")) {
-					string title = j.Get ("job_title");
-					Console.WriteLine (title);				
-				}
-			}
-			*/
-
-			//Console.WriteLine ("# of html files = "l1.Count + ", # of JSON files = " + l2.Count);
-
-			/*
-			CoverLetter cl = new CoverLetter (l2[0]);
-			cl.printDOCX ();
-			*/
-
-			//StartGUI ();
-		}
-		public static List<Job> getJobsFrom(string fileType) {
-			var jobList = new List<Job> ();
-
-			int i = 1;
-			var jobs = FileHandler.getFileNames (fileType);
-			foreach (string s in jobs) {
-				//Console.Clear ();
-				Console.Write ("Converting job " + i++ + " of " + jobs.Count + Environment.NewLine);
-				var name = Path.GetFileName(s);
-				string id = System.Text.RegularExpressions.Regex.Replace (name, "\\..*", "");
-				Job j = new Job ("test");
-				if(fileType.ToLower() == "html")
-					jobList.Add (j = Job.fromHTML(id));
-				if(fileType.ToLower() == "json")
-					jobList.Add (Job.fromJSON(id));
-			}
-			return jobList;
 		}
 		public static void StartGUI (){
 			Application.Init ();
