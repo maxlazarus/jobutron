@@ -2,4 +2,8 @@
 .html
 .project
 .pydevproject
+.csproj
+.sln
+.userprefs
+/bin/
 jobs/
