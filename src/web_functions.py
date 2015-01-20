@@ -66,4 +66,5 @@ for form_id in matches:
 
 print "Disconnecting"
 browser.close()
+browser.quit()
 quit()
