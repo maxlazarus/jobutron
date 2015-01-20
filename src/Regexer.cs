@@ -53,5 +53,16 @@ namespace jobulator {
 			data = Regex.Replace (data, "[\\n\\r]+", "");
 			return new KeyValuePair<string, string> (categoryTitle, data);
 		}
+		public static List<string> Matches(string target, string pattern) {
+			var list = new List<string> ();
+			Regex regex = new Regex(pattern, RegexOptions.Singleline);
+			var ms = regex.Matches(target);
+			foreach (Match m in ms)
+				list.Add (m.Groups [0].Value);
+			return list;
+		}
+		public static string Replace(string target, string pattern, string replacement) {
+			return Regex.Replace (target, pattern, replacement);
+		}
 	}
 }

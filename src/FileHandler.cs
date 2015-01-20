@@ -15,14 +15,13 @@ namespace jobulator {
 		}
 		public static StreamReader Open (String s) {
 			try {
-				return new StreamReader(resPath + s);
+				return new StreamReader(findPath(s));
 			} catch {
 				return null;
 			}
 		}
 		public static string OpenAsString (String s) {
-			var dir = (s.Contains("html"))? "jobs" + slash: "res" + slash;
-			StreamReader sr = new StreamReader(basePath + dir + s);
+			StreamReader sr = new StreamReader(findPath(s));
 			string line = "", document = "";
 			while ((line = sr.ReadLine ()) != null) {
 				document += line;
@@ -40,6 +39,12 @@ namespace jobulator {
 			var dir = (extension.Contains ("html")) ? "jobs" + slash : "res" + slash;
 			var filePaths = Directory.EnumerateFiles (basePath + dir, "*." + extension);
 			return new System.Collections.Generic.List<string>(filePaths);
+		}
+		public static string findPath(string s) {
+			var dir = "";
+			dir = (s.Contains("html"))? "jobs" + slash: "res" + slash;
+			dir = (s.Contains("cover"))? "covers" + slash: dir;
+			return basePath + dir + s;
 		}
 	}
 }

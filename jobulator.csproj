@@ -53,6 +53,7 @@
   <ItemGroup>
     <Folder Include="res\" />
     <Folder Include="jobs\" />
+    <Folder Include="covers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -497,5 +498,7 @@
     <None Include="jobs\54424.html" />
     <None Include="jobs\54425.html" />
     <None Include="jobs\54430.html" />
+    <None Include="covers\basic.cover" />
+    <None Include="covers\example.cover" />
   </ItemGroup>
 </Project>

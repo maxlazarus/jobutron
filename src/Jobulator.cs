@@ -16,7 +16,7 @@ namespace jobulator {
 			foreach (Job j in l1)
 				j.WriteJSON ();
 				*/
-			var jobs = getJobsFrom ("json", 500);
+			var jobs = getJobsFrom ("json", 10);
 
 			//GenerateWordList ();
 

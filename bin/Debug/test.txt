@@ -1,0 +1,24 @@
+JOB POSTING INFORMATION
+Position Type:Co-op Undergraduate Employment
+Start of Workterm:May 2015
+Length of Work Term:4 or 8 months
+Job Title:Automation Hardware Developer
+Job Location:Burnaby
+Number of Positions:1
+Salary ($):TBD
+Frequency:Monthly
+Industry:Biomedical/Biotechnology
+Company Type:Private Business
+Job Description:About the Company: Coastal Genomics is a new player in the Life Science instrumentation industry that is focused on providing technical and engineering solutions to unresolved bottlenecks in laboratory bench work. We recently commercialized a technology that automates the purification and size-selection of DNA. Having completed our first round of sales to early-access customers, we are now focused on optimizing in-house manufacturing processes through the development of custom automation solutions.Position Description: Coastal Genomics is seeking an engineering student to assist in developing a workstation for manufacturing our DNA electrophoresis cassettes. The goal will be to automate the assembly and QC of mating plastic components. The finished product will incorporate fluorescent machine vision and digital image processing, robotic motion control, automated pneumatics, and software development.The successful candidate will implement his/her own design ideas while working directly with our engineering team on this project, and will gain valuable exposure to the life-science engineering community in the Vancouver area.This position is available starting May 2015 for either a 4 or 8 month duration, depending on the availability of the chosen candidate.Job Requirements:Applicants should have an interest in automated manufacturing processes, as well as experience in at least some of the following areas:- Electrical systems- basic hands-on experience with circuit design, manual cable termination, populating and soldering PCB’s, and using electronic measurement tools (DMM, oscilloscope etc...)- PCB layout software(EAGLE or similar) - a bonus but not required- Mechanical design- comfortable with mechanical assembly and a basic understanding of different manufacturing methods (machining, sheet-metal work, plastic-welding, 3D-printing etc…)- 3D modeling(SolidWorks or similar)- Prototyping- direct hands-on experience building electro-mechanical systems, and experience working with different raw material (metals, plastics, wood)- Using basic hand tools(hack saw, drill, file, tap &amp; die etc…); machine-shop experience a plus- Software/firmware development- basic experience developing and implementing processes in C++ or any C-like language, including experience with microcontrollers- Motion control, robotics, programmable automationIn addition to technical skills and experience, overall work ethic and interpersonal skills will be critical factors in the selection process.Critically, a demonstrated ability to implement solutions for unfamiliar problems is key.Open To All Majors:Yes
+Start Date:05/04/2015
+End Date:08/28/2015
+Hours Per Week:40
+APPLICATION INFORMATION	Application Receipt Procedure:Online via system
+ORGANIZATION INFORMATION	Company:Coastal Genomics
+Division:Burnaby Office
+Website:http://coastalgenomics.com/©
+2015
+UBC Engineering Co-op Program
+MyAccount&nbsp;&nbsp;|&nbsp;&nbsp;
+Log OutPowered by Orbis Career / Co-op Portal
+Professional v2Job LocationcloseClose
