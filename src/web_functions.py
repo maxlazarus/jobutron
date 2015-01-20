@@ -3,7 +3,12 @@ Created on Jan 11, 2015
 
 @author: max@theprogrammingclub.com
 '''
-from selenium import webdriver, common
+try:
+	from selenium import webdriver, common
+except:
+	from subprocess import call
+	call (["sudo", "pip", "install", "-U", "selenium"])
+	from selenium import webdriver, common 
 from os import path
 from os import sep as slash
 import re
@@ -15,8 +20,11 @@ login = r"/secure/shibboleth.htm"
 postings = r"/myAccount/postings.htm"
 
 print "Welcome to jobulator by max@theprogrammingclub.com"
+try:
+	browser = webdriver.PhantomJS()
+except:
+	browser = webdriver.PhantomJS('./phantomjs')
 
-browser = webdriver.PhantomJS()
 browser.delete_all_cookies()
 
 print "Connecting..."
@@ -26,6 +34,10 @@ while True:
     print "Login attempt " + str(i)
     i += 1
     try:
+	try: 
+		browser.quit()
+	except AttributeError:
+		pass
         browser.get(tld + login)
         p_h.enter_username_and_password(browser)
         browser.get(tld + postings)
