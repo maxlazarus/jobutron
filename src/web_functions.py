@@ -11,7 +11,6 @@ except:
 	from selenium import webdriver, common 
 from os import path
 from os import sep as slash
-import selenium
 import re
 import codecs
 import password_handler as p_h
@@ -20,16 +19,9 @@ tld = r"https://www.ubcengcore.com"
 login = r"/secure/shibboleth.htm"
 postings = r"/myAccount/postings.htm"
 
-profile = webdriver.FirefoxProfile()
-profile.set_preference("general.useragent.override","your_user_agent_string")
-#driver = webdriver.Firefox(profile)
-
 print "Welcome to jobulator by max@theprogrammingclub.com"
-try:
-	browser = webdriver.PhantomJS()
-except:
-	browser = webdriver.PhantomJS('./phantomjs')
 
+browser = webdriver.PhantomJS()
 browser.delete_all_cookies()
 
 print "Connecting..."
@@ -39,10 +31,6 @@ while True:
     print "Login attempt " + str(i)
     i += 1
     try:
-	try: 
-		browser.quit()
-	except AttributeError:
-		pass
         browser.get(tld + login)
         p_h.enter_username_and_password(browser)
         browser.get(tld + postings)
