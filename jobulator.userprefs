@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="jobulator.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\CoverLetter.cs">
+    <Files>
+      <File FileName="src\Jobulator.cs" Line="5" Column="5" />
+      <File FileName="src\FileHandler.cs" Line="5" Column="5" />
+      <File FileName="src\Job.cs" Line="15" Column="15" />
+      <File FileName="src\Regexer.cs" Line="16" Column="16" />
+      <File FileName="src\CoverLetter.cs" Line="95" Column="95" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
