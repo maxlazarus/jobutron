@@ -11,6 +11,7 @@ except:
 	from selenium import webdriver, common 
 from os import path
 from os import sep as slash
+import selenium
 import re
 import codecs
 import password_handler as p_h
@@ -18,6 +19,10 @@ import password_handler as p_h
 tld = r"https://www.ubcengcore.com"
 login = r"/secure/shibboleth.htm"
 postings = r"/myAccount/postings.htm"
+
+profile = webdriver.FirefoxProfile()
+profile.set_preference("general.useragent.override","your_user_agent_string")
+#driver = webdriver.Firefox(profile)
 
 print "Welcome to jobulator by max@theprogrammingclub.com"
 try:
