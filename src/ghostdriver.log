@@ -6,4 +6,4 @@ PhantomJS is launching GhostDriver...
 [INFO  - 2015-01-20T02:32:27.438Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 931ff020-a04c-11e4-9c66-5f75dc9e5271
 [INFO  - 2015-01-20T02:37:26.068Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2015-01-20T02:37:43.071Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-71', because windowless
+[INFO  - 2015-01-20T02:38:14.780Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
