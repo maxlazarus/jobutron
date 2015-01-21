@@ -16,18 +16,19 @@ namespace jobulator {
 			foreach (Job j in l1)
 				j.WriteJSON ();
 				*/
-			var jobs = getJobsFrom ("json", 10);
+			var jobs = getJobsFrom ("json", 500 );
 
 			//GenerateWordList ();
 
 			foreach (Job j in jobs) {
+				//Console.WriteLine(j.Get("application_deadline"));
 				if (
 					(
 						j.Get ("job_location").ToLower().Contains ("vancouver") |
 						j.Get ("job_location").ToLower().Contains ("burnaby") |
 						j.Get ("job_location").ToLower().Contains ("richmond")
 					) && (
-						j.Get("application_deadline").ToLower().Contains("19")
+						j.Get("application_deadline").ToLower().Contains(@"jan 20")
 					)
 				) {
 					Console.WriteLine ("Generating cover letter for position " + j.Get ("id"));

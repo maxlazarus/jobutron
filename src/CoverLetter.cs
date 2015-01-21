@@ -14,7 +14,7 @@ namespace jobulator {
 
 		public CoverLetter(Job j) {
 			job = j;
-			var cl = new StreamReader (FileHandler.findPath ("example.cover"));
+			var cl = new StreamReader (FileHandler.findPath ("basic.cover"));
 			var p = new Paragraph ();
 			string line = "";
 			while ((line = cl.ReadLine ()) != null) {
@@ -32,7 +32,12 @@ namespace jobulator {
 			var doc = DocX.Create(fileName);
 			foreach(Paragraph p in content)
 				doc.InsertParagraph (p.ToString());
-			doc.Save();
+			try {
+				doc.Save();
+			} catch(Exception e) {
+				Console.WriteLine ("Document error in file(s) for " + job.Get("id"));
+				Console.WriteLine (e.ToString ());
+			}
 			//System.Diagnostics.Process.Start("WINWORD.EXE", fileName);
 		}
 	}
