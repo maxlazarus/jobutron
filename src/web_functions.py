@@ -101,7 +101,11 @@ def upload_cover_letter(browser, job_id):
     
 print "Welcome to jobulator by max@theprogrammingclub.com"
 
-browser = webdriver.PhantomJS()
+try:
+	browser = webdriver.PhantomJS()
+except:
+	browser = webdriver.PhantomJS("./phantomjs")
+
 browser.delete_all_cookies()
 
 login_to_site(browser, 5)

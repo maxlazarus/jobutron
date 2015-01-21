@@ -500,5 +500,8 @@
     <None Include="jobs\54430.html" />
     <None Include="covers\basic.cover" />
     <None Include="covers\example.cover" />
+    <None Include=".gitignore" />
+    <None Include="src\web_functions.py" />
+    <None Include="src\ghostdriver.log" />
   </ItemGroup>
 </Project>
