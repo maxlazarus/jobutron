@@ -9,9 +9,8 @@ This application has 2 different parts (which I hope to integrate soon)
       - phantomjs ghostdriver executables should already be present
     
   - c# code: utility to extract key information from the html and format as json
-      - also tools to automatically generate cover letters and save as .docx
-    - usage: vanilla c# (for now), compile and run jobulator.cs, I'm using mono
-      - so there may be key references missing if you are compiling it by another method
+    - also tools to automatically generate cover letters and save as .docx
+    - usage: vanilla c# (for now), compile and run jobulator.cs, I'm using mono so there may be key references missing if you are compiling it by another method
     - dependencies: Novacode should already be included as package already
     
   - if you have difficulties contact me at max@theprogramminglub.com, I appreciate the response
