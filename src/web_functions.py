@@ -15,7 +15,8 @@ from os import path
 from os import sep as slash
 import re
 import codecs
-import password_handler as p_h
+
+#x = json.load(f) f= json.dump(x)
 
 tld = r"https://www.ubcengcore.com"
 login = r"/secure/shibboleth.htm"
@@ -25,18 +26,24 @@ upload = r"/myAccount/myDocuments.htm"
 def login_to_site(browser, limit):
     print "Connecting..."
     i = 1
-    while True:
+    loop = True
+    while loop == True:
         print "Login attempt " + str(i)
         i += 1
         try:
             browser.get(tld + login)
-            p_h.enter_username_and_password(browser)
-            break
+            username = str(raw_input("Enter your username: "))
+            password = str(raw_input("Enter your password: "))
+            browser.find_element_by_id("j_username").send_keys(username)
+            browser.find_element_by_id("password").send_keys(password)
+            browser.find_element_by_name("action").click()
+            loop = False
         except Exception, e:
             print "Couldn't do it: %s" % e #login failed      
-            browser.save_screenshot("last.png")
+            browser.save_screenshot("login_error.png")
+            loop = True
             if i > limit:
-                break
+                disconnect(browser)
            
 def disconnect(browser):
     print "Disconnecting"
@@ -49,6 +56,7 @@ def get_jobs_list(browser):
         print "Finding job list, attempt " + str(i)
         i += 1
         try:
+            browser.save_screenshot("job_attempt.png")
             browser.get(tld + postings)
             browser.find_element_by_id("fs5").submit()
             break
@@ -86,11 +94,11 @@ def scrape_HTML(content) :
 def upload_cover_letter(browser, job_id):
     print "Uploading cover letter " + job_id;
     browser.get(tld + upload)
-    browser.save_screenshot("last0.png")
+    browser.save_screenshot("upload_error.png")
 
-	#!!!!!!!!!!!!!!!!!!!!!!
-	#does not work at all!!
-	#!!!!!!!!!!!!!!!!!!!!!!
+    #!!!!!!!!!!!!!!!!!!!!!!
+    #does not work at all!!
+    #!!!!!!!!!!!!!!!!!!!!!!
     a = browser.find_element_by_class_name("mediumTestButton")
     
     actions = ac.ActionChains(browser)
@@ -102,9 +110,9 @@ def upload_cover_letter(browser, job_id):
 print "Welcome to jobulator by max@theprogrammingclub.com"
 
 try:
-	browser = webdriver.PhantomJS()
+    browser = webdriver.PhantomJS()
 except:
-	browser = webdriver.PhantomJS("./phantomjs")
+    browser = webdriver.PhantomJS("./phantomjs")
 
 browser.delete_all_cookies()
 
