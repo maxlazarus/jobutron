@@ -1,7 +1,8 @@
 .log
+src/*.log
 .html
 .json
 .docx
-basic.cover
-software.cover
+covers/basic.cover
+covers/software.cover
 

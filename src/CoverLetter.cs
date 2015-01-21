@@ -14,7 +14,7 @@ namespace jobulator {
 
 		public CoverLetter(Job j) {
 			job = j;
-			string coverTemplate = "example.cover";
+			string coverTemplate = "";
 			if (
 				j.CategoryContains ("job_title", "software") |
 				j.CategoryContains ("job_title", "developer") |
@@ -24,20 +24,33 @@ namespace jobulator {
 			} else {
 				coverTemplate = "basic.cover";
 			}
-			var cl = new StreamReader (FileHandler.findPath (coverTemplate));
+
+			StreamReader cl;
+
+			try {
+				cl = new StreamReader (FileHandler.findPath (coverTemplate));
+			} catch {
+				cl = new StreamReader (FileHandler.findPath ("example.cover"));
+			}
 			var p = new Paragraph ();
 			string line = "";
+
 			while ((line = cl.ReadLine ()) != null) {
 				var matches = Regexer.Matches (line, @"(?<=\<)(.*?)(?=\>)");
 				foreach (var v in matches)
 					line = Regexer.Replace (line, @"<" + v + @">", j.Get (v));
 				p.Add (line + n);
 			}
+
 			cl.Close ();
 			content.Add (p);
 		}
-
-		public void printDOCX() {
+		public static void Generate(Job j) {
+			Console.WriteLine ("Generating cover letter for position " + j.Get ("id"));
+			CoverLetter cl = new CoverLetter (j);
+			cl.PrintDOCX ();
+		}
+		public void PrintDOCX() {
 			string fileName = FileHandler.resPath + job.Get("id") + @".docx";
 			var doc = DocX.Create(fileName);
 			foreach(Paragraph p in content)

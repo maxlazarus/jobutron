@@ -11,13 +11,13 @@ namespace jobulator {
 
 		public static void Main() {
 		
-			/*
+
 			var jobs = getJobsFrom ("html", 500);
 			foreach (Job j in jobs)
 				j.WriteJSON ();
+			/*
+				var jobs = getJobsFrom ("json", 500 );
 			*/
-
-			var jobs = getJobsFrom ("json", 500 );
 
 			//GenerateWordList ();
 
@@ -25,17 +25,15 @@ namespace jobulator {
 				//Console.WriteLine(j.Get("application_deadline"));
 				if (
 					(
-						j.Get ("job_location").ToLower().Contains ("vancouver") |
-						j.Get ("job_location").ToLower().Contains ("burnaby") |
-						j.Get ("job_location").ToLower().Contains ("richmond")
+						j.CategoryContains ("job_location", "vancouver") |
+						j.CategoryContains ("job_location", "burnaby") |
+						j.CategoryContains ("job_location", "richmond")
 					) && (
-						j.Get("application_deadline").ToLower().Contains(@"jan 21") &&
-						!j.Get("job_title").ToLower().Contains("instructor")
+						j.CategoryContains("application_deadline", @"jan 22") &&
+						!j.CategoryContains("job_title", "instructor")
 					) 
 				) {
-					Console.WriteLine ("Generating cover letter for position " + j.Get ("id"));
-					CoverLetter cl = new CoverLetter (j);
-					cl.printDOCX ();
+					CoverLetter.Generate (j);
 				}
 			}
 
