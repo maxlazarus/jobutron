@@ -4,12 +4,22 @@ Created on Jan 11, 2015
 @author: max@theprogrammingclub.com
 '''
 
+def install_dependencies():
+	import os
+	from subprocess import call
+	#call (["sudo", "pip", "install", "-U", "selenium"]) #LINUX, OSX
+	call (["python", "-m", "pip", "install", "-U", "selenium"]) #WINDOWS
+	from selenium import webdriver, common  # @NoMove @Reimport @UnusedImport
+
 try:
     from selenium import webdriver, common  # @NoMove @UnusedImport
 except:
-    from subprocess import call
-    call (["sudo", "pip", "install", "-U", "selenium"])
-    from selenium import webdriver, common  # @NoMove @Reimport @UnusedImport
+	try:
+		install_dependencies()
+	except:
+		execfile("get-pip.py")
+		install_dependencies()
+		
 import selenium.webdriver.common.action_chains as ac
 from os import path
 from os import sep as slash
