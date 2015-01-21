@@ -14,7 +14,17 @@ namespace jobulator {
 
 		public CoverLetter(Job j) {
 			job = j;
-			var cl = new StreamReader (FileHandler.findPath ("basic.cover"));
+			string coverTemplate = "example.cover";
+			if (
+				j.CategoryContains ("job_title", "software") |
+				j.CategoryContains ("job_title", "developer") |
+				j.CategoryContains ("industry", "software")
+			) { 
+				coverTemplate = "software.cover";
+			} else {
+				coverTemplate = "basic.cover";
+			}
+			var cl = new StreamReader (FileHandler.findPath (coverTemplate));
 			var p = new Paragraph ();
 			string line = "";
 			while ((line = cl.ReadLine ()) != null) {

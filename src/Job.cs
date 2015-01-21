@@ -11,21 +11,29 @@ namespace jobulator {
 				Add ("id", id);
 		}
 
-		public void Add(string a, Object o) {
+		public void Add(string s, Object o) {
 			try {
-				categories.Add (a, o);
+				categories.Add (s, o);
 			} catch {
 				//Logger.log("Error adding " + a " of type " + o.ToString())
 			}
 		}
-		public string Get(string a) {
-			if (Check (a))
-				return categories [a].ToString ();
+		public string Get(string s) {
+			if (Check (s))
+				return categories [s].ToString ();
 			else
 				return "";
 		}
-		public bool Check(string a) {
-			return categories.ContainsKey (a);
+		public bool Check(string s) {
+			return categories.ContainsKey (s);
+		}
+		public bool CategoryContains(string c, string s) {
+			//CONVERTS TO LOWER CASE WHEN CHECKING
+			if (Check (c)) {
+				var lowerCase = categories [c].ToString ().ToLower ();
+				return lowerCase.Contains (s);
+			}
+			return false;
 		}
 		public void Print() {
 			foreach(KeyValuePair<string, Object> kvp in categories) {

@@ -503,5 +503,6 @@
     <None Include=".gitignore" />
     <None Include="src\web_functions.py" />
     <None Include="src\ghostdriver.log" />
+    <None Include="covers\software.cover" />
   </ItemGroup>
 </Project>
