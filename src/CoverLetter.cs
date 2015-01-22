@@ -15,15 +15,7 @@ namespace jobulator {
 		public CoverLetter(Job j) {
 			job = j;
 			string coverTemplate = "";
-			if (
-				j.CategoryContains ("job_title", "software") |
-				j.CategoryContains ("job_title", "developer") |
-				j.CategoryContains ("industry", "software")
-			) { 
-				coverTemplate = "software.cover";
-			} else {
-				coverTemplate = "basic.cover";
-			}
+			coverTemplate = CoverChooser.Choose (j);
 
 			StreamReader cl;
 
