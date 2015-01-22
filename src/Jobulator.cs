@@ -10,8 +10,7 @@ namespace jobulator {
 		public Jobulator () {}
 
 		public static void Main() {
-		
-
+	
 			var jobs = getJobsFrom ("html", 500);
 			foreach (Job j in jobs)
 				j.WriteJSON ();
@@ -23,21 +22,10 @@ namespace jobulator {
 
 			foreach (Job j in jobs) {
 				//Console.WriteLine(j.Get("application_deadline"));
-				if (
-					(
-						j.CategoryContains ("job_location", "vancouver") |
-						j.CategoryContains ("job_location", "burnaby") |
-						j.CategoryContains ("job_location", "richmond")
-					) && (
-						j.CategoryContains("application_deadline", @"jan 22") &&
-						!j.CategoryContains("job_title", "instructor")
-					) 
-				) {
+                if(JobChooser.Test(j)){
 					CoverLetter.Generate (j);
 				}
 			}
-
-			//Console.WriteLine ("# of html files = "l1.Count + ", # of JSON files = " + l2.Count);
 
 			//StartGUI ();
 		}

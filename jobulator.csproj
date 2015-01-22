@@ -31,6 +31,8 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="src\JobChooser.cs" />
+    <Compile Include="src\CoverChooser.cs" />
     <Compile Include="src\Jobulator.cs" />
     <Compile Include="src\FileHandler.cs" />
     <Compile Include="src\Job.cs" />
@@ -52,8 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="res\" />
-    <Folder Include="jobs\" />
-    <Folder Include="covers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

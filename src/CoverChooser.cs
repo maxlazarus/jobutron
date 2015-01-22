@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace jobulator {
+﻿namespace jobulator {
 	public class CoverChooser {
 		public CoverChooser () {
 		}
