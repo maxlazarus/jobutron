@@ -11,6 +11,8 @@ namespace jobulator {
 
 		public static void Main() {
 
+			//WebFunctions.Init ();
+
 			//GenerateWordList ();
 
 			foreach (Job j in Job.getJobsFrom("html", 500)) {

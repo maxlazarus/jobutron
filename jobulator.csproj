@@ -38,6 +38,7 @@
     <Compile Include="src\Job.cs" />
     <Compile Include="src\Regexer.cs" />
     <Compile Include="src\CoverLetter.cs" />
+    <Compile Include="src\WebFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="res\" />
+    <Folder Include="bin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -507,5 +509,7 @@
     <None Include="src\web_functions.py" />
     <None Include="src\ghostdriver.log" />
     <None Include="covers\software.cover" />
+    <None Include="src\phantomjs" />
+    <None Include="bin\phantomjs" />
   </ItemGroup>
 </Project>
