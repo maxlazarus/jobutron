@@ -10,17 +10,10 @@ namespace jobulator {
 		public Jobulator () {}
 
 		public static void Main() {
-	
-			var jobs = getJobsFrom ("html", 500);
-			foreach (Job j in jobs)
-				j.WriteJSON ();
-			/*
-				var jobs = getJobsFrom ("json", 500 );
-			*/
 
 			//GenerateWordList ();
 
-			foreach (Job j in jobs) {
+			foreach (Job j in Job.getJobsFrom("html", 500)) {
 				//Console.WriteLine(j.Get("application_deadline"));
                 if(JobChooser.Test(j)){
 					CoverLetter.Generate (j);
@@ -28,26 +21,6 @@ namespace jobulator {
 			}
 
 			//StartGUI ();
-		}
-		public static List<Job> getJobsFrom(string fileType, int limit) {
-			var jobList = new List<Job> ();
-
-			int i = 1;
-			var jobs = FileHandler.getFileNames (fileType);
-			foreach (string s in jobs) {
-				if (i >= limit)
-					break;
-				//Console.Clear ();
-				Console.Write ("Converting job " + i++ + " of " + jobs.Count + Environment.NewLine);
-				var name = Path.GetFileName(s);
-				string id = System.Text.RegularExpressions.Regex.Replace (name, "\\..*", "");
-				Job j = new Job ("test");
-				if(fileType.ToLower() == "html")
-					jobList.Add (j = Job.fromHTML(id));
-				if(fileType.ToLower() == "json")
-					jobList.Add (Job.fromJSON(id));
-			}
-			return jobList;
 		}
 		public static void GenerateWordList(List<Job> jobs){
 			var wordFrequency = new Dictionary<string, int> ();

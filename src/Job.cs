@@ -28,10 +28,10 @@ namespace jobulator {
 			return categories.ContainsKey (s);
 		}
 		public bool CategoryContains(string c, string s) {
-			//CONVERTS TO LOWER CASE WHEN CHECKING
+			//CASE INSENSITIVE
 			if (Check (c)) {
 				var lowerCase = categories [c].ToString ().ToLower ();
-				return lowerCase.Contains (s);
+				return lowerCase.Contains (s.ToLower());
 			}
 			return false;
 		}
@@ -58,6 +58,25 @@ namespace jobulator {
 				this.Add (kvp.Key, kvp.Value);
 			}
 		}
+		public static List<Job> getJobsFrom(string fileType, int limit) {
+			var jobList = new List<Job> ();
+
+			int i = 1;
+			var jobs = FileHandler.getFileNames (fileType);
+			foreach (string s in jobs) {
+				if (i >= limit)
+					break;
+				Console.Write ("Converting job " + i++ + " of " + jobs.Count + Environment.NewLine);
+				var name = System.IO.Path.GetFileName(s);
+				string id = System.Text.RegularExpressions.Regex.Replace (name, "\\..*", "");
+				if(fileType.ToLower() == "html")
+					jobList.Add (Job.fromHTML(id));
+				if(fileType.ToLower() == "json")
+					jobList.Add (Job.fromJSON(id));
+			}
+			return jobList;
+		}
+
 		public static Job fromHTML(string name) {
 			string html = FileHandler.OpenAsString (name + @".html");
 			var jText = Regexer.Convert (html);

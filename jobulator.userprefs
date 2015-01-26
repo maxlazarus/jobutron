@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Job.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Jobulator.cs">
     <Files>
-      <File FileName="src/Jobulator.cs" Line="5" Column="7" />
-      <File FileName="src/FileHandler.cs" Line="3" Column="25" />
-      <File FileName="src/Job.cs" Line="49" Column="40" />
+      <File FileName="src/Jobulator.cs" Line="20" Column="6" />
+      <File FileName="src/FileHandler.cs" Line="1" Column="1" />
+      <File FileName="src/Job.cs" Line="1" Column="1" />
+      <File FileName="src/CoverLetter.cs" Line="4" Column="13" />
+      <File FileName="src/web_functions.py" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
