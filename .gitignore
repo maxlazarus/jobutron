@@ -3,6 +3,8 @@ src/*.log
 .html
 .json
 .docx
+.userprefs
 covers/basic.cover
 covers/software.cover
+/bin/Debug/
 
