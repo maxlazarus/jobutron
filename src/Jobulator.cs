@@ -2,7 +2,6 @@
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
-using Gtk;
 
 namespace jobulator {
 	public class Jobulator {
@@ -11,16 +10,25 @@ namespace jobulator {
 
 		public static void Main() {
 
-			//WebFunctions.Init ();
+			var d = new Driver ();
+			d.GoTo ("indeed.ca");
+			//d.PrintCurrentPage ();
+			d.Dispose ();
+
+			GUI g = new GUI ("jobulator");
+			g.Start ();
+			g.AddButton ("Yes oh yes!");
+			g.ListJobs (Job.getJobsFrom("html", 5));
 
 			//GenerateWordList ();
 
+			/*
 			foreach (Job j in Job.getJobsFrom("html", 500)) {
 				//Console.WriteLine(j.Get("application_deadline"));
                 if(JobChooser.Test(j)){
 					CoverLetter.Generate (j);
 				}
-			}
+			}*/
 
 			//StartGUI ();
 		}
@@ -49,25 +57,6 @@ namespace jobulator {
 				output += kvp.Key + " " + kvp.Value + "<br>" + Environment.NewLine;
 			}
 			FileHandler.Write (output, "wordlist.txt");
-		}
-		public static void StartGUI (){
-			Application.Init ();
-			Window myWin = new Window ("Jobulator");
-			myWin.Resize (300, 500);
-
-			Button b;
-			var vBox = new VBox ();
-			/*
-			foreach (Job j in jobs){
-				b = new Button ();
-				b.Label = j.Get ("id");
-				vBox.Add (b);
-			}
-			*/
-			myWin.Add (vBox);
-			myWin.ShowAll();
-
-			Application.Run();
 		}
 	}
 }

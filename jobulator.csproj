@@ -38,7 +38,8 @@
     <Compile Include="src\Job.cs" />
     <Compile Include="src\Regexer.cs" />
     <Compile Include="src\CoverLetter.cs" />
-    <Compile Include="src\WebFunctions.cs" />
+    <Compile Include="src\Driver.cs" />
+    <Compile Include="src\GUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
