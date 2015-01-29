@@ -17,8 +17,6 @@ namespace jobulator {
 
 			GUI g = new GUI ("jobulator");
 			g.Start ();
-			g.AddButton ("Yes oh yes!");
-			g.ListJobs (Job.getJobsFrom("html", 5));
 
 			//GenerateWordList ();
 

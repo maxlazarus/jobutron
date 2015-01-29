@@ -40,6 +40,13 @@ namespace jobulator {
 				Console.WriteLine (kvp.Key + " : " + (string)kvp.Value);
 			}
 		}
+		public string ToString() {
+			string s = "";
+			foreach(KeyValuePair<string, Object> kvp in categories) {
+				s += kvp.Key + " : " + (string)kvp.Value + Environment.NewLine;
+			}
+			return s;
+		}
 		public void WriteJSON() {
 			var s = "{";
 			var comma = "";
@@ -76,7 +83,6 @@ namespace jobulator {
 			}
 			return jobList;
 		}
-
 		public static Job fromHTML(string name) {
 			string html = FileHandler.OpenAsString (name + @".html");
 			var jText = Regexer.Convert (html);
