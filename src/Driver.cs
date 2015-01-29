@@ -10,7 +10,7 @@ namespace jobulator {
 		IWebDriver driver;
 
 		public Driver () {
-			driver = new ChromeDriver (FileHandler.basePath + @"bin");
+			driver = new ChromeDriver (FileHandler.binPath);
 		}
 
 		public void GoTo(String site) {

@@ -22,11 +22,13 @@ namespace jobulator {
 			window.DeleteEvent += OnDeleteEvent;
 
 			AddButton ("MORE BUTTONS!", (x, y) => AddButton("CHILD", (a, b) => {}));
-			AddButton ("JOBS", (x, y) => ListJobs (Job.getJobsFrom("html", 5))); 
+			AddButton ("JOBS", (x, y) => ListJobs (Job.getJobsFrom("html", 5)));
 
+            vBox.WidthRequest = 200;
 			hBox.Add (vBox);
 			hBox.Add (textView);
-			window.Add (hBox);
+			
+            window.Add (hBox);
 			window.ShowAll();
 
 			Application.Run();

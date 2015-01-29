@@ -5,14 +5,22 @@ using System.Text.RegularExpressions;
 namespace jobulator {
 	public class FileHandler {
 
-		public readonly static string slash = "", resPath = "", basePath = "", srcPath = "";
+        public readonly static string
+            slash = "",
+            resPath = "",
+            basePath = "",
+            srcPath = "",
+            binPath = "",
+            osName = "";
 
 		static FileHandler (){
 			var os = System.Environment.OSVersion;
-			slash = (os.ToString().Contains("Windows"))? "\\": "/";
+            osName = (os.ToString().Contains("Windows"))? "windows": "linux";
+            slash = (osName == "windows")? "\\" : "/";
 			basePath = ".." + slash + ".." + slash;
 			resPath = basePath + "res" + slash;
 			srcPath = basePath + "src" + slash;
+            binPath = basePath + "bin" + slash + osName + slash;  
 		}
 		public static StreamReader Open (String s) {
 			try {
