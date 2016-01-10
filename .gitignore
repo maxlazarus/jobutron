@@ -6,5 +6,8 @@ src/*.log
 .userprefs
 covers/basic.cover
 covers/software.cover
+/covers/
 /bin/Debug/
 /browser_images/
+/res/
+/jobs/
