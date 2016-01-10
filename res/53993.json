@@ -1,0 +1,20 @@
+{
+	"id" : "53993",
+	"application_deadline" : "Mar 31, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 months",
+	"job_title" : "ESD SYSTEM VALIDATION COOP (JOB # 1088215001)",
+	"job_location" : "Burnaby, BC",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "ESD SYSTEM VALIDATION COOPAbout the JobDivision: Enterprise and Storage DivisionLocation: Burnaby, BCAPPLY WITH RESUME AND TRANSCRIPT TO JOB # 1088215001The System Engineering group in collaboration with Product Development, is responsible for ensuring that the end products operate fully in their intended applications. This involves the planning, design, integration, test and documentation of a complete system level platform used to test the prototype CMOS Integrated Circuits and FW/SW.&nbsp; The System Validation Design Engineer works in parallel with the IC and FW/SW designers to design an entire system, involving highly integrated FPGA's with VHDL/Verilog coding, high speed digital/analog board designs, script coding, and software driver/OS system level integration.Using these systems, together with the latest communication analyzers and test equipment, the System Validation Design Engineer will work as part of a team to develop and execute a Feature Test Plan that fully exercises the prototype IC and associated FW/SW.&nbsp; Working at the system level, the System Validation Design Engineer will be involved with existing and newly drafted standards including Serial Attached SCSI, Serial ATA, PCIe and other related standards commonly used in Network Attached Storage (NAS) and Storage Area Networks (SAN).ResponsibilitiesAs a Co-op one of these activities would be assigned: you will be involved in designing, building and debugging system level HW, SW and FW to test leading edge prototype IC's in their intended applications. Design work includes:• Highly integrated programmable chip level designs - FPGA design and VHDL coding required to enable device pre-proto FPGA emulation testing• C/C++ FW development and application level Tcl/Tk scripting for automated control of the system• High speed board design using PMC and third party IC's, involving both analog and digital circuitry• You will work as part of a team to develop, execute and document a series of Feature Tests that will fully validate the operation of the prototype SOC as part of the overall system. These feature tests will exercise the various functional blocks of a prototype IC, associated FW/SW and tests the system level circuitry to performance criteria and to industry standards.• Troubleshoot and resolve complex problems in embedded multi-core real-time systems.• Effectively present technical information to small teams of engineers.",
+	"job_requirements" : "Qualifications:• Electrical or Computer Engineering senior co-op student• Experience/Knowledge of C, C++ programming languages• Experience/Knowledge of a scripting Language such as Tck/Tk• Experience in a lab or testing environment• Experience /Knowledge of high speed digital and analog circuitry• Knowledge of FPGA's and VHDL or Verilog coding• Experience/knowledge of Linux is an asset• Ability to quickly ramp on new projects• Excellent analytical skills• Excellent communication and documentation skills• Interest in digital and analog circuit design and test of Data Storage devices with embedded processors, protocol blocks, and high speed I/OOpen To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Employer Website",
+	"if_by_website,_go_to" : "www.pmcs.com/careers",
+	"company" : "PMC-Sierra Inc.",
+	"division" : "Operations Head Office - Burnaby",
+	"website" : "www.pmcs.com"
+}

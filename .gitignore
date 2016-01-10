@@ -7,4 +7,4 @@ src/*.log
 covers/basic.cover
 covers/software.cover
 /bin/Debug/
-
+/browser_images/

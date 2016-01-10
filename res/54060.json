@@ -1,0 +1,19 @@
+{
+	"id" : "54060",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 months",
+	"job_title" : "Full Stack Developer",
+	"job_location" : "Waterloo, ON",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "Way back in 2009, two Waterloo grads created Enflickwith a mission to deliver a better messaging solution that would empower people to stay closer with their friends and family.Today, TextNowand Touch Mobile, the company’s two core products, are in the hands of more than 40 million users worldwide and continue to grow at an alarming rate. We are the world’s first all IP, cloud based, mobile phone carrier. Building clever systems and weaving technologies across platforms is what drives our growth.Of course we’ll take good care of you during your time with us, but the excitement lies in our work. Work with us and impact the millions of people who rely on our products. If you want to change the rules of the game then we want to hear from you!As a Full Stack Developer you will:Develop RESTful web applications using PHP, Ruby on Rails, and SinatraDesign, scale and optimize our database architectureDesign, build and deploy large system software that will have an immediate effect on millions of users&nbsp;Our stack includes:PHP, Rails, SinatraMySQL (MariaDB), Cassandra, RedisAWS, Linux (CentOS)&nbsp;Bonuspointsfor:Nginx, RackDoctrine, Symfonyknowledge of SMS, MMS, and VoIP technologiesElasticSearchEnflick Culture?We thrive on cleverness and freedom. Like our product, our teams work seamlessly. Our space is open, casual and bright just the like the folks you'll work with. We're goal focused and everyone knows where we are headed because we talk about it.What’s in it for you?Competitive Salary, Paid Vacation, 401k, Options, Flexible hoursWe take excellent care of our people: From catered lunch daily to professional development to referral bonuses to corporate events (sports; soirees; socials)We provide the best tools while you are here with us: MacBook Pro, 27 Cinema Display, Smartphone deviceAnd finally, yes, we're in Waterloo!",
+	"job_requirements" : "Have or working towards:Bachelor’s degree in Computer Science, Computer Engineering, Software Engineering or equivalentStrong competencies in data structures, algorithms and OO designExperience developing scalable web services and architectureExperience with source control tools (We use Git)Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Enflick, Inc.",
+	"division" : "Head Office",
+	"website" : "http://www.enflick.com"
+}

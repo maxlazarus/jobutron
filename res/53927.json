@@ -1,0 +1,19 @@
+{
+	"id" : "53927",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 or 8 months",
+	"job_title" : "R&D Assistant",
+	"job_location" : "Vancouver, BC",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "About Illusense Inc.Illusense is small company based out of UBC. We are currently in the process of commercializing a laser based imaging system used for high-accuracy pipeline inspection. The technology development is a cross-disciplinary effort involving advanced mechanical design, electrical engineering and applied physics. Additionally, the team leverages concepts from the fields of computer science, embedded hardware development, machine learning / statistical modelling, and medical imaging. Illusense presents opportunities for interested co-op students to work on problems intersecting all of these areas and more.Job DescriptionThe successful applicant will be assisting in the design, fabrication, and verification of various components relating to Illusense’s proprietary imaging system. The project will be a multidisciplinary endeavor, and thus a certain level of comfort with both mechanical and electrical design will be necessary.&nbsp;",
+	"job_requirements" : "Required knowledge and skills:• Theoretical knowledge of both DC and AC circuit operation.• Basic analog circuit design using passive components, voltage regulators, amplifiers and filters.• Basic digital circuit design using discrete logic devices, microcontrollers, clock generators and level shifters.• Programming using C and/or C++.• Proficiency with mechanical design concepts such as fabrication tolerances, material properties, common mechanisms and an understanding of the use of standards.• Familiarity with common additive and subtractive fabrication techniques.• Mechanical CAD using SolidWorks or similar.• Basic familiarity with instrumentation using bench-top devices such as oscilloscopes, network analyzers and multi-meters.While not a requirement, the following skills/experience will be an asset:• PCB layout using Altium Designer or similar.• Experience working with power electronics.• Theoretical knowledge of computer architecture.• Experience working with AVR and/or ARM processors.• Experience working with Xilinx and/or Altera FPGAs/SoCs.• Proficiency programming using Python.• Experience conducting data analysis using MATLAB, Python, and/or R.• Conceptual and practical understanding of motors and motor drivers.• Experience working in a Unix environment.• Knowledge of control theory.• Knowledge and experience interacting with laser systems and optics.Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"additional_application_information" : "Additional Application Information",
+	"(i.e._driver's_abstract)" : "(i.e. Driver's Abstract):Interested candidates may reply with a cover letter explaining which of the aforementioned sub-disciplines they are most interested in exploring. Please make mention of any areas of specialization, relevant work experience or technical projects that might assist us in best matching your talents to an upcoming project.Company:Illusense Inc",
+	"division" : "Engineering"
+}

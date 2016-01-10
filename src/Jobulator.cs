@@ -12,7 +12,8 @@ namespace jobulator {
 
 			var d = new Driver ();
 			d.GoTo ("indeed.ca");
-			//d.PrintCurrentPage ();
+			d.PrintCurrentPage ();
+            //d.SaveCurrentPageAs("");
 			d.Dispose ();
 
 			GUI g = new GUI ("jobulator");

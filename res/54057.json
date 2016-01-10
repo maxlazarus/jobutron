@@ -1,0 +1,19 @@
+{
+	"id" : "54057",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 months",
+	"job_title" : "DevOps Engineer",
+	"job_location" : "Waterloo, ON",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "Way back in 2009, two grads from Waterloo created Enflickwith a mission to deliver a better messaging solution that would empower people to stay closer with their friends and family.&nbsp;Today, TextNowand Touch Mobile, the company's two core products, are in the hands more than 40 million users worldwide and continue to grow exponentially.&nbsp; We are the world's first all IP, cloud based, mobile phone carrier. Building clever systems and weaving technologies across platforms is what drives Enflick's growth. Of course we'll take good care of you during your time with us, but the excitement lies in our work. Work with us and impact the millions of people who rely on our products. If you want to change the rules of the game then we want to hear from you!&nbsp;As a DevOps Engineer you will:• Work closely with development teams to design and deploy robust, scalable infrastructure• Manage the operation, performance and monitoring of all tools and services• Develop tools to automate the management of our distributed systems&nbsp;Our stack includes:Ruby, PHP, Bash, PuppetMySQL/MariaDB, Cassandra, Redisnode.js, Rails, Nginx&nbsp;Enflick Culture?We thrive on cleverness and freedomLike our product, our teams work seamlessly.Our space is open, casual and bright just the like the folks you'll work with.We're goal focused and everyone knows where we are headed because we talk about it.What's in it for you?Competitive Salary, Paid Vacation, Flexible hoursWe take excellent care of our people: From catered lunch daily to professional development to referral bonuses to corporate events (sports; soirees; socials)",
+	"job_requirements" : "Have or working towards:Bachelor’s degree in Computer Science, Computer Engineering, Software Engineering or equivalentExperience with AWS or other similar cloud solutionsExperience with server automation (Puppet, Chef, or similar)Experience with monitoring tools such as Nagios, Graphite, etc.Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Enflick, Inc.",
+	"division" : "Head Office",
+	"website" : "http://www.enflick.com"
+}

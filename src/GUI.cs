@@ -4,7 +4,7 @@ using Pango;
 
 namespace jobulator {
 	public class GUI {
-
+        
 		Window window;
 		VBox vBox = new VBox ();
 		HBox hBox = new HBox ();

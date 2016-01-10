@@ -1,0 +1,18 @@
+{
+	"id" : "53815",
+	"application_deadline" : "Jan 19, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 months",
+	"job_title" : "VERIFICATION / VALIDATION ENGINEER",
+	"job_location" : "Santa Clara, CA; Beaverton; OR Austin, TX",
+	"number_of_positions" : "3",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "VERIFICATION / VALIDATION ENGINEER (Santa Clara, CA; Beaverton; OR Austin, TX)NVIDIA's GPUs are among the most advanced and complex single-chip processors in the world, and require cutting edge validation methodology. In this key role, you will be instrumental in the development of a validation suite of future GPU architectures and verification of hardware implementation.RESPONSIBILITIES• Development of directed or random diagnostics to validate the processor Instruction Set Architecture (ISA), reference models, C simulation models, RTL models, HW emulators and real hardware.• Writing and reviewing validation test plans• Debug of diagnostics on various platforms",
+	"job_requirements" : "MINIMUM REQUIREMENTS - Minimum GPA: 3.5• Pursuing BS or MS in Computer Science or Electrical Engineering• Internship or Lab Experience with GPU or Processor verification / validation and software programming.• Requires strong programming experience in C/C++ and assembly• Good debug skillsDESIRABLE EXPERIENCE/KNOWLEDGE (should include, however not limited to):• Low level software experience like BIOS, device drivers• Experience with HW/SW interactions• Experience with directed and Random functional testing including writing test plans and directed or random diagnostics• Software infrastructure for validation of architecture correctnessOpen To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "nVidia Corporation",
+	"division" : "Head Office"
+}

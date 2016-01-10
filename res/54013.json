@@ -1,0 +1,18 @@
+{
+	"id" : "54013",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "8 or 12 months",
+	"job_title" : "Embedded System Software, Integration & Hardware Validation Intern",
+	"job_location" : "San Jose, California",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "Embedded System Software, Integration & Hardware Validation Intern at Xilinx California HeadquartersThe System Software, Integration & Validation group plays a key role in the development of test systems and hardware for test & characterization of Xilinx’s advanced device families.Our most recent project has been for the ground-breaking Zynq-7000 All Programmable SoC, with dual core ARM processing.To support our group, we are looking for a 6-12 month intern.Depending on the intern’s skill set & internship duration, the intern will focus on 1 or more of the following areas:•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Embedded system software•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System-level stress testing•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hardware validationTypical duties:•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Design, research and bring-up of embedded systems utilizing Xilinx FPGAs with ARM, PowerPC, or MicroBlaze CPUs•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Understand and use microprocessors in FPGAs, using microprocessor documentation as references•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Support the group in building software designs around advanced features of current and future FPGA families•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assist in running benchmarks on standalone and on embedded operating system(e.g. Linux) environments•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assemble test hardware from standard components. Knowledge of PC assembly, soldering, network installation is desirable.•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Develop Standalone applications for tests•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compile Linux kernels for embedded systems•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Help automate design, test and build processes•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Develop scripts for regression tests•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug test failures",
+	"job_requirements" : "Requirements:•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sophomore (2nd year) or Junior (3rd year) student enrolled in a Bachelors or student in a Masters Degree program in Electrical / Computer Engineering with an emphasis on embedded system development.•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Programming languages: C, PERL, Verilog (preferred)/VHDL•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student must be available for 6-12months, starting in Jan 2015, and able to re-locate to San Jose. Shorter internships will not be considered.Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Software SystemsUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Xilinx Inc.",
+	"division" : "Corporate Head Office"
+}

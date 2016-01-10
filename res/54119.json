@@ -1,0 +1,18 @@
+{
+	"id" : "54119",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 or 8 months",
+	"job_title" : "Software Quality Assurance Engineer",
+	"job_location" : "Vancouver, BC",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "You MUST be NSERC eligible in order to apply for this position.- Automate testing of all new and existing features- Build new tools to increase efficiency of product validation- Accountable for delivering quality and reliability of our BeanworksAP product.- Develop test automation infrastructure and scripts to ensure that existing products continue to function as they are supposed to, and help tract, resolve, and discover issues with products that are currently in production and those about to enter production.- Work closely with development and product teams from the beginning of story kick-offs, to understand features and create comprehensive test plans to verify functionality.- Execute Test Cases with multiple supported browsers on various operating systems.- Analyse test results and perform regression tests in an iterative development environment.- Identify bugs through systematic testing, help developers reproduce errors and verify defects are fixed.- Work with customer support, product marketing, and development in determining what to test and how best to seek resolution of the problems found.",
+	"job_requirements" : "- Proven and successful experience developing automated tests and test systems.- Very good web scripting skills (cURL, Python, PHP or equivalents).- Self-motivated to build tools to take the mundane out of your work. If you do something more than once, you take the time to automate it.- Stellar communications skills to properly document bugs and work with the development team for its resolution.- Hands-on experience with scripting software such as Selenium. Ticketing systems (Jira, GreenHopper), web/mobile technologies, and UI & Command line automation tools.- Self-motivated and passionate about helping the development team release bug free cod e.- Solid analytical, troubleshooting and problem solving skills with a keen eye for details.- Experienced and comfortable working in Linux environments and developing Bash / Shell scripts- Knowledge, interest and experience testing in distributed web architecture/SaaS environments.- NSERC eligibility&nbsp;Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Beanworks",
+	"division" : "Engineering"
+}

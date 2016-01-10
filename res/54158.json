@@ -1,0 +1,18 @@
+{
+	"id" : "54158",
+	"application_deadline" : "Jan 16, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 months",
+	"job_title" : "Automation Infrastructure Development - Multi-OS, Multi-core, Hypervisor",
+	"job_location" : "Ottawa, ON",
+	"number_of_positions" : "2",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "Automation Infrastructure Development - Multi-OS, Multi-core, HypervisorCo-op PositionWind River Systems, the company that created the operating system used on the Mars Rovers and the Boeing 787 Dreamliner, is looking to fill a co-op position to enable an automated test infrastructure system to power high quality delivery of its operating systems and products. In a company with significant growth and the leader in embedded platforms, you will be part of a team developing the test infrastructure for a variety of products used in the embedded market. This position requires proven skills in software development tools and excellent oral and written communication skills. The ability to consider multiple operating systems, multi-core devices, virtualization technology, and multiple targets while designing and implementing a feature is essential. You will likely need to work with a variety of tools, operating systems, and products to ensure delivery of high quality code.Responsibilities:Deliver features and updates to the infrastructure using your Python, 'C', and other skills. You will be responsible to understand an integrated environment while coding in a portable manner with exposure to VxWorks, Linux, Hypervisor, and other Wind River products.",
+	"job_requirements" : "Requirements:• 2+ years in software development• General experience with development and maintenance• General experience with kernel design and philosophy, as well as user-space design and philosophy• Experience with Python development or experience with 'C' development• Ability to work with general direction, or on specific tasks• Highly organized, detail-oriented, possessing a high level of integrity, and highly motivated• Ability to work collaboratively and independently in a cross-functional and team-oriented environment• Experience with VxWorks an asset• Experience with Linux development an assetWind River, a wholly owned subsidiary of Intel Corporation (NASDAQ: INTC), is a world leader in embedded and mobile software, and has been pioneering computing inside embedded devices since 1981&nbsp;Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalMaster of Software SystemsUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Wind River Systems Inc.",
+	"division" : "Canada"
+}

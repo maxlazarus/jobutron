@@ -1,0 +1,21 @@
+{
+	"id" : "53728",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "8 or 12 months",
+	"job_title" : "Technical Consultant",
+	"job_location" : "Vancouver (Gastown)",
+	"number_of_positions" : "2",
+	"salary" : "18",
+	"frequency" : "Hourly",
+	"industry" : "Consulting - IT Services",
+	"company_type" : "Private Business",
+	"job_description" : "As a Technical Consultant, you would work as a consulting team member on project implementations, custom development, data migrations and integrations. You would use your classroom and real-world experience to help leverage the full potential of CRM technology to meet clients’ strategic and business objectives as well as create and enhance internal processes for Groundswell.You are excited to chart new territory and push the boundaries of technology. You are able to see past the immediate answer and find the best solution. If you don’t know the answer to something, you’ll do your best to find out. You are passionate about what you do and are able to effectively communicate that passion with colleagues and clients. You are autonomous and able to chase down an assignment on your own, but you work best when you are also an integral member of an exceptional team. You are driven to grow in your career and want to be mentored by experts in the field. You have an insatiable appetite for learning and an ability to quickly adapt to new technologies.Responsibilities• Create mock-ups, prototypes, data models, slide presentations, pseudo code, and process flows• Help perform Data Migrations from source to target system using bespoke and off-the-shelf tools • Integrate Salesforce.com with various other systems using ETL tools and web services• Write APEX code to customize Salesforce.com to meet a client’s requirements• Build custom interfaces, reports, dashboards on top of the Force.com platform• Produce quality deliverables within hard deadlines• Contribute to internal strategic projects• Shadow /Participate in requirements gathering sessions, customer meetings and planning sessions • Translate business language into technical requirements (and vice versa)",
+	"job_requirements" : "Key skills:● Ability to research answers and solve problems independently● Ability to work without constant supervision● Motivated and driven to get the job done● Excellent written and verbal communication● Outstanding time management● Strong customer focusBasic understanding of● Agile development methodologies● Software-as-a-Service modelGood understanding of● Web technologies and patterns (e.g. MVC)● Object-oriented programming￼￼● SQL and DatabasesHands-on experience* with at least one each of the following:● Programming languages: Salesforce APEX, Visualforce, Java, C#, Visual Basic, Javascript, Ruby, Python, PHPor similar● Databases: Oracle, MSSQL, MySQL, Postgres, DB2, Informix or similarHands-on experience* with at least two of the following:● Web related technologies & Libraries: HTML, CSS, Javascript, jQuery, Bootstrap, AngularJS, SOAP, REST,OAuth, Node.js or similarBonus points for● Projects you have done in your spare time (e.g. a cool web app, game, mobile app, website you built whenyou were at school)● Contributions to open source projects or work you’ve done for other organisations● Work you've done with cloud services (e.g. Salesforce.com, Heroku, AppFog, AWS, Azure)● Interesting technical projects you've done while studying*Experience can be in the classroom, your own projects, or work you’ve done for other organisationsOpen To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:40",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Groundswell Cloud Solutions, Inc.",
+	"division" : "Vancouver Office",
+	"website" : "http://groundswell.force.com/"
+}

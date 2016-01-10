@@ -1,0 +1,20 @@
+{
+	"id" : "54278",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "8 months",
+	"job_title" : "Embedded Systems Engineer (Co-op)",
+	"job_location" : "Vancouver, BC",
+	"number_of_positions" : "6",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "Position DescriptionA co-op term at Intel of Canada, Ltd. is a challenging and rewarding experience, allowing you to gain knowledge and experience in design and test of IC and module products based on the latest generation of Flash Memory devices.&nbsp; As a member of our Systems Engineering team, you will work alongside experienced engineers to solve new and interesting problems, making an important contribution to our exciting high-performance solid state drive projects.&nbsp;Embedded system development positions in the following areas are available:&nbsp;Firmware – Develop the code that runs the show!&nbsp; Implement embedded firmware and test advanced algorithms that manage SSD activities, improve performance and add new capabilities.&nbsp;Digital Design / Validation - Be a part of the development of the “brain” of the SSD! &nbsp;Gain an understanding of the digital logic, and help to develop and validate new controllers for future products.&nbsp; Use FPGAs to prototype new systems.&nbsp;Hardware – Get hands-on experience with SSD electronics!&nbsp; Work with advanced lab test equipment to validate new PCBs and work with design tools to capture schematics, simulate, and layout new circuit designs.&nbsp;Please indicate your preference(s) in cover letter.&nbsp;NOTE: &nbsp;Company ProfileFor over 40 years, Intel Corporation has developed technology enabling the computer and Internet revolution that has changed the world. Founded in 1968 to build semiconductor memory products, Intel introduced the world's first microprocessor in 1971. Today, Intel supplies the computing and communications industries with chips, boards, systems, and software building blocks that are the ingredients of computers, servers and networking and communications products. These products are used by industry members to create advanced computing and communications systems. Intel's mission is to delight our customers, employees, and shareholders by relentlessly delivering the platform and technology advancements that become essential to the way we work and live.&nbsp;Visit us at www.intel.comfor more information!",
+	"job_requirements" : "QualificationsWe are looking for enthusiastic students with excellent communication and interpersonal skills, strong problem solving ability, a desire to learn and a good general knowledge of embedded systems, digital design, software/firmware development and testing methodology. Working knowledge of any of the following tools/languages/equipment would be an asset:&nbsp;Firmware: C/C++, ARM processors, Green Hills debugger&nbsp;Digital Design / Validation: Verilog, SystemVerilog, Xilinx ISE, Python, logic analyzers&nbsp;Hardware: Cadence Allegro, oscilloscopes, power analyzers, SKILL, Visual Basic, C/C++&nbsp;Job assignments will be based on the available projects during the work term and on the skills and interests of the student, so we encourage candidates with any subset of these skills to apply.&nbsp;&nbsp;Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalStart Date:05/04/2015",
+	"hours_per_week" : "0",
+	"application_receipt_procedure" : "Online via system",
+	"additional_application_information" : "Additional Application Information",
+	"(i.e._driver's_abstract)" : "(i.e. Driver's Abstract):Notes:Please include a cover letter and recent transcripts with your application.Must be permanent resident in Canada to apply for this position&nbsp;Company:Intel Corporation",
+	"division" : "Intel of Canada"
+}

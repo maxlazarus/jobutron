@@ -1,0 +1,18 @@
+{
+	"id" : "53821",
+	"application_deadline" : "Jan 19, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 months",
+	"job_title" : "SYSTEMS INFRASTRUCTURE ARCHITECT FOR CHIP DEVELOPMENT ENVIRONMENT",
+	"job_location" : "Santa Clara, CA",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "The NVIDIA Architecture group is looking for world class programmers to evolve the core verification infrastructure for the development of full system and discrete graphics and computing chips.&nbsp;&nbsp;&nbsp;&nbsp; This strongly Object Oriented Perl and Java/C++ infrastructure encompasses several extensive applications that allow us to efficiently verify the world’s largest chips with a sophisticated distributed computing execution and triage environment.A key part of NVIDIA’s strength is our unique and advanced development tools and environments that enable our incredible pace of new technology delivered to market.&nbsp;&nbsp; We are looking for architects for the next generation of our development and verification environments.&nbsp;&nbsp;&nbsp;&nbsp; You will join a fast-paced agile software team with high production quality standards.&nbsp;&nbsp; This role involves developing the chip definition languages and infrastructure, compute infrastructure supporting very large scale distributed, cross-platform runs of mission critical proprietary applications and simulation,&nbsp; creating integrated development and debugging environments (based on tools such as Eclipse),&nbsp; implementing cutting-edge software engineering methodologies and tools to improve code quality,&nbsp; creating and driving quality build and release processes, and driving the performance improvement of these applications.&nbsp;&nbsp; NVidia is continuously pushing the state of the art in chip development and needing the next generation of development environments to enable the next generation of chips.In this position, you will participate in the full tool development and release life cycle, working closely with other project members and the chip architects to specify systems, creating schedules, and managing ongoing feedback and enhancement releases.&nbsp; You will be using the best of your art in creating environments that are stable and easy to use by hundreds of engineers worldwide.&nbsp; You will learn and greatly improve the daily workflows of the world's top chip modelers and designers.",
+	"job_requirements" : "MINIMUM REQUIREMENTS:- Strong object-oriented programming and design pattern knowledge: Object Oriented Perl, C++ or Java preferred- Excellent interpreted language skills highly desired –Perl preferred- Experience in software development life cycle on Linux based platforms preferred- Experience with MySQL or Postgress strongly desired- Experience with hardware verification, particularly in developing complex regression automations, strongly desired- BS in Computer Science preferred- Excellent communication skills- Flexibility/adaptability for working in a dynamic environmentOpen To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "nVidia Corporation",
+	"division" : "Head Office"
+}

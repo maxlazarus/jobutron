@@ -1,0 +1,19 @@
+{
+	"id" : "53676",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 or 8 months",
+	"job_title" : "Software Engineer",
+	"job_location" : "Vancouver, BC",
+	"number_of_positions" : "1",
+	"salary" : "TBD",
+	"frequency" : "Monthly",
+	"job_description" : "We’re mojio – we are a young Vancouver startup that is going to define the future of the connected car experience. Mojio builds cloud-based technologies for cars. This enables real-time communication with smart phone apps for consumers, service providers, and automotive retailers. Mojio is an open platform and encourages partnerships with developers.If you want to stretch your talents and have been looking for an opportunity to ply your craft and show what you are capable of, we want to talk to you.We are looking for a software developer to be part of our team. You will be responsible for the coding of the moj.io server and iOS/Adroid apps. You will get to work on all the layers of our cloud based platform.You will:• Work with a web development expert who will build the front end to support your back end code• Define beautiful, elegant yet simple user workflows and experiences• Write the programming code, either from scratch or by adapting existing software• Test the server code (unit tests) and identify any technical problems• Deploy the site onto staging and live servers• Respond to user and internal feedback",
+	"job_requirements" : "You (hopefully) should:• Be an expert in software programming .Net, C#, javascript, coffeescript, jquery, css, html• Have experience with Visual Studio, bitbucket/github (or some version control system), ASP.NET MVC, JSON and REST• Have experience with server development on Amazon Web Service, Azure, Appharbour or other cloud based live environments• Experience with Monotouch/Monodevelop (now Xamarin) is a huge bonus. Past iOS/Android app experience also an asset• NoSQL/Big data experience (mongodb, redis, etc.)• Be creative and imaginative – we can teach you the above but not this• Be adaptable and able to pick up new techniques and learn from available resources• Have a soft spot for user experience and beautiful simple workflows• Have good interpersonal and communication skills• Keep up to date with advances in computer technology and how this affects the business environmentPreference will be given to NSERC-IUSRA qualified candidates (Canadian Citizen or Permanent Resident undergrad student with minimum B- GPA); or NSERC-IPS qualified candidates (Canadian Citizen or Permanent Resident graduate student with minimum A- GPA).This is a 4 month job posting with the possibility of extension to 8 months.Open To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science Okanagan in ElectricalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering Okanagan in ElectricalMaster of Software SystemsUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Mojio",
+	"division" : "Vancouver Office",
+	"website" : "www.moj.io"
+}

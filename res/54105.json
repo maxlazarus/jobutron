@@ -1,0 +1,18 @@
+{
+	"id" : "54105",
+	"application_deadline" : "Jan 20, 2015 0700AM",
+	"position_type" : "Both Undergraduate and Graduate",
+	"start_of_workterm" : "May 2015",
+	"length_of_workterm" : "4 or 8 months",
+	"job_title" : "Firmware Programmer",
+	"job_location" : "Vancouver, BC",
+	"number_of_positions" : "1",
+	"salary" : "tbd",
+	"frequency" : "Monthly",
+	"job_description" : "&nbsp;Kardium is a dynamic company made up of a group of highly talented individuals with expertise in business, management, electrical engineering, mechanical engineering, and software development.&nbsp; We are focused on developing innovative, highly differentiated medical devices.&nbsp; Kardium has assembled a highly skilled product development team and a fully-equipped rapid prototyping workshop and laboratory in order to commercialize several innovative medical devices, including a unique percutaneous approach to treating atrial fibrillation.We are looking for a top-notch student with strong programming, communication and problem-solving abilities. This student will assist our team in developing advanced training and testing infrastructure code for a safety critical medical device.The position involves porting embedded real-time safety critical C code from a MicroBlaze FPGA soft-core processor to run on Windows in communication with associated simulation code written in Java.&nbsp; The candidate will identify and implement an appropriate hardware abstraction layer. The hardware abstraction layer will include simulating hardware timers, communication channels and shared memory interfaces between the C code, a Java host application and the Java simulator code.&nbsp; The candidate must also write and integrate build scripts for the port into our current build server infrastructure.",
+	"job_requirements" : "The successful candidate will:&nbsp;&nbsp;&nbsp; * Have excellent communication skills&nbsp;&nbsp;&nbsp; * Have industrial experience with object-orient programming, typically with Java, C# or C++&nbsp;&nbsp;&nbsp; * Be familiar with the basics of embedded systems design and real-time processing&nbsp;&nbsp;&nbsp; * Be enthusiastic about finding innovative solutions to unforeseen challenges&nbsp;&nbsp;&nbsp; * Have a history of success working in a team settingThe following factors are desired and will increase the suitability of the candidate:&nbsp;&nbsp;&nbsp; * Experience with source repositories such as Perforce, CVS, ClearCase, or Subversion&nbsp;&nbsp;&nbsp; * Experiencce with requirements analysis and requirements specification&nbsp;&nbsp;&nbsp; * Experience with writing automated tests such as unit tests and test-driven developmentOpen To All Majors:No",
+	"targeted_co-op_programs" : "Targeted ClustersAll ProgramsTargeted ProgramsComputerElectricalIntegratedMaster of Applied Science in Electrical & ComputerMaster of Applied Science in MechanicalMaster of Applied Science Okanagan in ElectricalMaster of Applied Science Okanagan in MechanicalMaster of Engineering ComputerMaster of Engineering ElectricalMaster of Engineering in Mechatronics DesignMaster of Engineering MechanicalMaster of Engineering Okanagan in ElectricalMaster of Engineering Okanagan in MechanicalMaster of Software SystemsMechanicalUBC OkanaganUBC Okanagan ElectricalHours Per Week:0",
+	"application_receipt_procedure" : "Online via system",
+	"company" : "Kardium Inc.",
+	"division" : "Kardium"
+}
