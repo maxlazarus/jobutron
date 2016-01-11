@@ -10,13 +10,15 @@ namespace jobulator {
 
 		public static void Main() {
 
+            /*
 			var d = new Driver ();
 			d.GoTo ("indeed.ca");
 			d.PrintCurrentPage ();
-            //d.SaveCurrentPageAs("");
+            d.SaveCurrentPageAs("");
 			d.Dispose ();
-
-			GUI g = new GUI ("jobulator");
+            */
+             
+			GUI g = new GUI ("jobutron");
 			g.Start ();
 
 			//GenerateWordList ();

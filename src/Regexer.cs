@@ -3,12 +3,19 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace jobulator {
-	
-	class Regexer {
+namespace jobulator 
+{
+	class Regexer 
+    {
 		delegate void del(string a, string b);
 
-		public static string Convert(string text) {
+		public static string Convert(string text) 
+        {
+            // Regex getJobBody = new Regex(@"?<=JOB POSTING INFORMATION.*??=©", RegexOptions.Singleline);
+            var getJobBody = @"(?<=JOB POSTING INFORMATION)(.*?)(?=©)";
+            var resultText = Regex.Match(text, getJobBody).Groups[0].Value;
+
+            /*
 			Regex regex = new Regex("(<.*?>\\s*)+", RegexOptions.Singleline);
 			text = regex.Replace(text, "").Trim();
 
@@ -35,9 +42,12 @@ namespace jobulator {
 			reg (@"Work Term", "Workterm");
 			reg ("©", "");
 			reg (@"&amp;", @"&");
-
+            
+             */
+           
 			return resultText;
 		}
+
 		public static KeyValuePair<string, string> ExtractKeyValuePair(string line) {
 			line = Regex.Replace (line, '"' + "", "");
 			var categoryTitle = Regex.Replace (line, ":.*", "");
@@ -53,7 +63,9 @@ namespace jobulator {
 			data = Regex.Replace (data, "[\\n\\r]+", "");
 			return new KeyValuePair<string, string> (categoryTitle, data);
 		}
-		public static List<string> Matches(string target, string pattern) {
+
+		public static List<string> Matches(string target, string pattern) 
+        {
 			var list = new List<string> ();
 			Regex regex = new Regex(pattern, RegexOptions.Singleline);
 			var ms = regex.Matches(target);
@@ -61,7 +73,9 @@ namespace jobulator {
 				list.Add (m.Groups [0].Value);
 			return list;
 		}
-		public static string Replace(string target, string pattern, string replacement) {
+
+		public static string Replace(string target, string pattern, string replacement) 
+        {
 			return Regex.Replace (target, pattern, replacement);
 		}
 	}

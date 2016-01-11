@@ -2,55 +2,77 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace jobulator {
-	public class Job {
+namespace jobulator 
+{
+	public class Job 
+    {
 		private Dictionary <string, Object> categories = new Dictionary <string, Object>();
 
-		public Job (string id) {
+		public Job (string id) 
+        {
 			if(!Check(id))
 				Add ("id", id);
 		}
 
-		public void Add(string s, Object o) {
-			try {
+		public void Add(string s, Object o) 
+        {
+			try 
+            {
 				categories.Add (s, o);
-			} catch {
+			} 
+            catch 
+            {
 				//Logger.log("Error adding " + a " of type " + o.ToString())
 			}
 		}
-		public string Get(string s) {
+
+		public string Get(string s) 
+        {
 			if (Check (s))
 				return categories [s].ToString ();
 			else
 				return "";
 		}
-		public bool Check(string s) {
+
+		public bool Check(string s) 
+        {
 			return categories.ContainsKey (s);
 		}
-		public bool CategoryContains(string c, string s) {
-			//CASE INSENSITIVE
+
+		public bool CategoryContains(string c, string s) 
+        {
+			// Case insensitive
 			if (Check (c)) {
 				var lowerCase = categories [c].ToString ().ToLower ();
 				return lowerCase.Contains (s.ToLower());
 			}
 			return false;
 		}
-		public void Print() {
-			foreach(KeyValuePair<string, Object> kvp in categories) {
+
+		public void Print() 
+        {
+			foreach(KeyValuePair<string, Object> kvp in categories) 
+            {
 				Console.WriteLine (kvp.Key + " : " + (string)kvp.Value);
 			}
 		}
-		public string ToString() {
+
+		public override string ToString() 
+        {
 			string s = "";
-			foreach(KeyValuePair<string, Object> kvp in categories) {
+			foreach(KeyValuePair<string, Object> kvp in categories) 
+            {
 				s += kvp.Key + " : " + (string)kvp.Value + Environment.NewLine;
 			}
 			return s;
 		}
-		public void WriteJSON() {
+
+		public void WriteJSON() 
+        {
 			var s = "{";
 			var comma = "";
-			foreach(KeyValuePair<string, Object> kvp in categories) {
+			foreach(KeyValuePair<string, Object> kvp in categories) 
+            {
 				s += comma;
 				comma = ",";
 				s += Environment.NewLine;
@@ -59,18 +81,26 @@ namespace jobulator {
 			s += Environment.NewLine + "}";
 			FileHandler.Write (s, this.Get("id") + ".json");
 		}
-		public void Fill(string s) {
-			foreach (var line in s.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)) {
+
+		public void Fill(string s) 
+        {
+			foreach (var line in s.Split(new string[] { Environment.NewLine }, 
+                    StringSplitOptions.RemoveEmptyEntries)) 
+            {
 				KeyValuePair<string, string> kvp = Regexer.ExtractKeyValuePair (line);
 				this.Add (kvp.Key, kvp.Value);
 			}
 		}
-		public static List<Job> getJobsFrom(string fileType, int limit) {
-			var jobList = new List<Job> ();
+
+		public static List<Job> getJobsFrom(string fileType, int limit) 
+        {	
+            var jobList = new List<Job> ();
 
 			int i = 1;
 			var jobs = FileHandler.getFileNames (fileType);
-			foreach (string s in jobs) {
+			
+            foreach (string s in jobs) 
+            {
 				if (i >= limit)
 					break;
 				Console.Write ("Converting job " + i++ + " of " + jobs.Count + Environment.NewLine);
@@ -83,30 +113,39 @@ namespace jobulator {
 			}
 			return jobList;
 		}
-		public static Job fromHTML(string name) {
+
+		public static Job fromHTML(string name) 
+        {
 			string html = FileHandler.OpenAsString (name + @".html");
 			var jText = Regexer.Convert (html);
 			Job j = new Job (name);
 			j.Fill (jText);
 			return j;
 		}
-		public static Job fromJSON(string name) {
+
+		public static Job fromJSON(string name) 
+        {
 			System.IO.StreamReader f = FileHandler.Open (name + @".json");				
-			if (f != null) {
+            if (f != null) 
+            {
 				Job j = new Job (name);
 				string line = "";
 
-				while ((line = f.ReadLine ()) != null) {
+				while ((line = f.ReadLine ()) != null) 
+                {
 					var m = Regex.Matches (line, "\\\"(.*?)\\\"");
 					var e = m.GetEnumerator ();
 
-					try {
+					try 
+                    {
 						e.MoveNext ();
 						var category = Regex.Replace(e.Current.ToString (), "\\\"", "");
 						e.MoveNext ();
 						var data = Regex.Replace(e.Current.ToString (), "\\\"", "");
 						j.Add(category, data);
-					} catch {
+					} 
+                    catch 
+                    {
 						//unreadable line
 					}
 				}

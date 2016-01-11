@@ -8,3 +8,13 @@ C:\Users\Maxim\Documents\GitHub\jobulator\obj\x86\Debug\jobulator.csprojResolveA
 C:\Users\Maxim\Documents\GitHub\jobulator\bin\Debug\DocX.dll
 C:\Users\Maxim\Documents\GitHub\jobulator\bin\Debug\WebDriver.dll
 C:\Users\Maxim\Documents\GitHub\jobulator\bin\Debug\WebDriver.xml
+C:\Users\Maxim\Documents\GitHub\jobutron\obj\x86\Debug\jobulator.exe
+C:\Users\Maxim\Documents\GitHub\jobutron\obj\x86\Debug\jobulator.pdb
+C:\Users\Maxim\Documents\GitHub\jobutron\bin\Debug\jobulator.exe
+C:\Users\Maxim\Documents\GitHub\jobutron\bin\Debug\jobulator.pdb
+C:\Users\Maxim\Documents\GitHub\jobutron\bin\Debug\DocX.dll
+C:\Users\Maxim\Documents\GitHub\jobutron\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maxim\Documents\GitHub\jobutron\bin\Debug\WebDriver.dll
+C:\Users\Maxim\Documents\GitHub\jobutron\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maxim\Documents\GitHub\jobutron\bin\Debug\WebDriver.xml
+C:\Users\Maxim\Documents\GitHub\jobutron\obj\x86\Debug\jobulator.csprojResolveAssemblyReference.cache
