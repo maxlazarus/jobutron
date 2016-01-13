@@ -2,6 +2,8 @@ using System;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.Xml;
+using HtmlAgilityPack;
 
 namespace jobulator 
 {
@@ -12,8 +14,13 @@ namespace jobulator
 		public static string Convert(string text) 
         {
             // Regex getJobBody = new Regex(@"?<=JOB POSTING INFORMATION.*??=©", RegexOptions.Singleline);
+            
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(text);
+            text = doc.DocumentNode.SelectSingleNode("//body").InnerText;
             var getJobBody = @"(?<=JOB POSTING INFORMATION)(.*?)(?=©)";
             var resultText = Regex.Match(text, getJobBody).Groups[0].Value;
+            resultText = Regex.Replace(resultText, @"\s+", " ").Trim();
 
             /*
 			Regex regex = new Regex("(<.*?>\\s*)+", RegexOptions.Singleline);
@@ -44,6 +51,7 @@ namespace jobulator
 			reg (@"&amp;", @"&");
             
              */
+            Console.Write(resultText);
            
 			return resultText;
 		}

@@ -17,11 +17,15 @@ namespace jobulator {
             d.SaveCurrentPageAs("");
 			d.Dispose ();
             */
-             
+           
+            /*
 			GUI g = new GUI ("jobutron");
 			g.Start ();
-
+            */
+            
 			//GenerateWordList ();
+
+            Job.getJobsFrom("html", 500);
 
 			/*
 			foreach (Job j in Job.getJobsFrom("html", 500)) {
@@ -33,6 +37,7 @@ namespace jobulator {
 
 			//StartGUI ();
 		}
+
 		public static void GenerateWordList(List<Job> jobs){
 			var wordFrequency = new Dictionary<string, int> ();
 			var list = new List<KeyValuePair<string, int>> ();
