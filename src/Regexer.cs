@@ -20,7 +20,6 @@ namespace jobulator
             text = doc.DocumentNode.SelectSingleNode("//body").InnerText;
             var getJobBody = @"(?<=JOB POSTING INFORMATION)(.*?)(?=©)";
             var resultText = Regex.Match(text, getJobBody).Groups[0].Value;
-            resultText = Regex.Replace(resultText, @"\s+", " ").Trim();
 
             /*
 			Regex regex = new Regex("(<.*?>\\s*)+", RegexOptions.Singleline);
@@ -34,10 +33,15 @@ namespace jobulator
 			string resultText = "application_deadline: " + expiry;
 			regex = new Regex("Position Type.*");
 			resultText += Environment.NewLine + regex.Match (text).Groups [0].Value;
+             * */
 			string newLine = Environment.NewLine;
 
 			del reg = (x, y) => resultText = Regex.Replace (resultText, x, y, RegexOptions.Singleline);
-			reg ('"' + "", "");
+            reg(@"&amp;", @"&");
+            reg(@"&nbsp;", @" ");
+
+            /*
+            reg ('"' + "", "");
 			reg (@"\s\s+", newLine);
 			reg ("[\\n\\r]+2015[\\n\\r]+UBC.*", "");
 			//reg ("Job Description:", "");
@@ -49,10 +53,16 @@ namespace jobulator
 			reg (@"Work Term", "Workterm");
 			reg ("©", "");
 			reg (@"&amp;", @"&");
-            
-             */
-            Console.Write(resultText);
-           
+            */
+
+            resultText = Regex.Replace(resultText, @"\s+", " ").Trim();
+            reg(@"(Print </form>)(.*?)(endtext -->)", "");
+
+            var categories = FileHandler.OpenAsList("Categories.txt");
+
+            foreach (String category in categories)
+                reg(category, newLine + category);
+
 			return resultText;
 		}
 

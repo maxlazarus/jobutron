@@ -25,7 +25,17 @@ namespace jobulator {
             
 			//GenerateWordList ();
 
-            Job.getJobsFrom("html", 500);
+            //Job.getJobsFrom("html", 500);
+
+            var jobList = new List<String>();
+            jobList.Add("61501");
+            jobList.Add("62096");
+            jobList.Add("61976");
+
+            foreach (String s in jobList)
+            {
+                Job.fromHTML(s);
+            }
 
 			/*
 			foreach (Job j in Job.getJobsFrom("html", 500)) {
