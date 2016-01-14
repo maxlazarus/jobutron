@@ -118,9 +118,6 @@ namespace jobulator
         {
 			string html = FileHandler.OpenAsString (name + @".html");
 			var jText = Regexer.Convert (html);
-            FileHandler.Write(jText, name + @".txt");
-            //CoverLetter.Generate(Job.fromHTML(s));
-
 			Job j = new Job (name);
 			j.Fill (jText);
 			return j;

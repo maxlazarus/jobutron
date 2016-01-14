@@ -34,7 +34,7 @@ import getpass
 top_level_domain = r'https://www.ubcengcore.com'
 login_path = r'/secure/shibboleth.htm'
 postings_path = r'/myAccount/co-op/postings.htm'
-upload = r'/myAccount/myDocuments.htm'
+upload_path = r'/myAccount/co-op/myDocuments.htm'
 image_folder_path = r'../browser_images/'
 
 def clear_images():
@@ -142,7 +142,7 @@ def save_content_as(content, filename):
         f.write(line)
     f.close()
 
-def keepLoggedIn(browser):
+def relog_in(browser):
 #try to click on 'Keep me logged in'
     try:
         logged_in_xpath = '//*[@id="keepMeLoggedInModal"]/div[3]/a[1]'
@@ -155,7 +155,7 @@ def keepLoggedIn(browser):
     return browser;
 
 def scrape_HTML(browser):
-
+#obselete, needs updating
     content = browser.page_source
 
     find_posting_id_regex = re.compile('postingId=[0-9]\d*')
@@ -191,30 +191,55 @@ def scrape_HTML(browser):
             except common.exceptions.NoSuchElementException, e:
                 raise ScriptFlowException
 
-            
-def upload_cover_letter(browser, job_id): 
-#! Unimplemented    
-    print 'Uploading cover letter ' + job_id;
-    browser.get(top_level_domain + upload)
+def to_upload(browser):
+    upload_button_xpath = '//*[@id="mainContentDiv"]/div[2]/div/a[1]'
+    print browser.current_url
+    browser.get(top_level_domain + upload_path)
+    time.sleep(3)
+    print browser.current_url
+    browser.save_screenshot(image_folder_path + 'cover upload.png')
+    browser.find_element_by_xpath(upload_button_xpath).click()
+    print 'Navigated to upload page'
+    return browser
+
+def upload_cover(browser, numerical_id):
+    name_xpath = '//*[@id="fileUploadForm"]/div[1]/div[2]/input'
+    type_xpath = '//*[@id="fileUploadForm"]/div[2]/div[2]/select/option[2]'
+    choose_file_xpath = '//*[@id="fileUploadForm"]/div[2]/div[2]/select'
+    finish_upload_button_xpath = '//*[@id="mainContentDiv"]/div[2]/div/div/div/div/div/a[1]'
+
+    filepath = path.abspath(path.join(path.dirname(__file__), '..', 'res/' + str(numerical_id) + '.docx'))
+    browser.find_element_by_xpath(name_xpath).send_keys(str(numerical_id))
+    browser.find_element_by_xpath(type_xpath).click()
+    try:
+        browser.find_element_by_xpath(choose_file_xpath).send_keys(filepath)
+    except Exception, e:
+        browser.save_screenshot(image_folder_path, 'cover upload.png')
+        raise e
+    print 'Uploaded cover ' + str(numerical_id)
+    return browser
 
 def main():
     from optparse import OptionParser
     parser = OptionParser()
-    '''
-    parser.add_option("-f", "--file", dest="filename",
-                      help="write report to FILE", metavar="FILE")
-    parser.add_option("-q", "--quiet",
-                      action="store_false", dest="verbose", default=True,
-                      help="don't print status messages to stdout")
-    '''
+    parser.add_option('-g', '--get', action='store_true', dest='mode')
+    parser.add_option('-u', '--upload', action='store_false', dest='mode')
     (options, args) = parser.parse_args()
     print 'Welcome to jobutron by max.prokopenko@gmail.com'
     b = get_browser()
     b = login(b)
-    for arg in args:
-        b = to_postings(b)
-        b = to_job(b, arg)
-        save_content_as(b.page_source, "../jobs/" + str(arg) + ".html")
+
+    if(options.mode == True):
+        for arg in args:
+            b = to_postings(b)
+            b = to_job(b, arg)
+            save_content_as(b.page_source, "../jobs/" + str(arg) + ".html")
+
+    if(options.mode == False):
+        for arg in args:
+            b = to_upload(b)
+            b = upload_cover(b, arg)
+
     disconnect(b)
     quit()
 

@@ -32,9 +32,12 @@ namespace jobulator {
             jobList.Add("62096");
             jobList.Add("61976");
 
+            Job j;
+
             foreach (String s in jobList)
             {
-                Job.fromHTML(s);
+                j = Job.fromHTML(s);
+                CoverLetter.Generate(j);
             }
 
 			/*

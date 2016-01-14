@@ -40,21 +40,6 @@ namespace jobulator
             reg(@"&amp;", @"&");
             reg(@"&nbsp;", @" ");
 
-            /*
-            reg ('"' + "", "");
-			reg (@"\s\s+", newLine);
-			reg ("[\\n\\r]+2015[\\n\\r]+UBC.*", "");
-			//reg ("Job Description:", "");
-			reg ("Job Requirements:", newLine + "Job Requirements:");
-			reg ("Position Description:", newLine + "Position Description:");
-			reg (@"APPLICATION INFORMATION\s+", "");
-			reg (@"ORGANIZATION INFORMATION\s+", "");
-			reg (@"\s\(\$\)", "");
-			reg (@"Work Term", "Workterm");
-			reg ("©", "");
-			reg (@"&amp;", @"&");
-            */
-
             resultText = Regex.Replace(resultText, @"\s+", " ").Trim();
             reg(@"(Print </form>)(.*?)(endtext -->)", "");
 
@@ -67,7 +52,7 @@ namespace jobulator
 		}
 
 		public static KeyValuePair<string, string> ExtractKeyValuePair(string line) {
-			line = Regex.Replace (line, '"' + "", "");
+			//line = Regex.Replace (line, '"' + "", "");
 			var categoryTitle = Regex.Replace (line, ":.*", "");
 			var data = "";
 			try {

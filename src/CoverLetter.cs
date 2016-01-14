@@ -12,7 +12,8 @@ namespace jobulator {
 		string n = Environment.NewLine;
 		List<Paragraph> content = new List<Paragraph> ();
 
-		public CoverLetter(Job j) {
+		public CoverLetter(Job j) 
+        {
 			job = j;
 			string coverTemplate = "";
 			coverTemplate = CoverChooser.Choose (j);
@@ -37,27 +38,35 @@ namespace jobulator {
 			cl.Close ();
 			content.Add (p);
 		}
-		public static void Generate(Job j) {
+
+		public static void Generate(Job j) 
+        {
 			Console.WriteLine ("Generating cover letter for position " + j.Get ("id"));
 			CoverLetter cl = new CoverLetter (j);
 			cl.PrintDOCX ();
 		}
-		public void PrintDOCX() {
+
+		public void PrintDOCX() 
+        {
 			string fileName = FileHandler.resPath + job.Get("id") + @".docx";
 			var doc = DocX.Create(fileName);
 			foreach(Paragraph p in content)
 				doc.InsertParagraph (p.ToString());
-			try {
+			try 
+            {
 				doc.Save();
-			} catch(Exception e) {
+			} 
+            catch(Exception e) 
+            {
 				Console.WriteLine ("Document error in file(s) for " + job.Get("id"));
 				Console.WriteLine (e.ToString ());
 			}
 			//System.Diagnostics.Process.Start("WINWORD.EXE", fileName);
 		}
 	}
-	class Paragraph {
 
+	class Paragraph 
+    {
 		List<string> sentences = new List<string> ();
 
 		public void Add(String s) {
