@@ -64,6 +64,7 @@ namespace jobulator
 			categoryTitle = Regex.Replace (categoryTitle, "[\\s]+", "_");
 			categoryTitle = categoryTitle.ToLower ();
 			data = Regex.Replace (data, "[\\n\\r]+", "");
+            data = data.Trim();
 			return new KeyValuePair<string, string> (categoryTitle, data);
 		}
 

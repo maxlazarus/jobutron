@@ -22,33 +22,18 @@ namespace jobulator {
 			GUI g = new GUI ("jobutron");
 			g.Start ();
             */
-            
-			//GenerateWordList ();
 
-            //Job.getJobsFrom("html", 500);
+            var jobList = Job.getJobsFrom("html", 500);
 
-            var jobList = new List<String>();
-            jobList.Add("61501");
-            jobList.Add("62096");
-            jobList.Add("61976");
+            GenerateWordList(jobList);
 
-            Job j;
-
-            foreach (String s in jobList)
+			foreach (Job j in jobList) 
             {
-                j = Job.fromHTML(s);
-                CoverLetter.Generate(j);
-            }
-
-			/*
-			foreach (Job j in Job.getJobsFrom("html", 500)) {
-				//Console.WriteLine(j.Get("application_deadline"));
-                if(JobChooser.Test(j)){
+                //if(JobChooser.Test(j))
+                {
 					CoverLetter.Generate (j);
 				}
-			}*/
-
-			//StartGUI ();
+			}
 		}
 
 		public static void GenerateWordList(List<Job> jobs){

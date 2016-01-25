@@ -20,18 +20,30 @@ namespace jobulator {
 
 			StreamReader cl;
 
-			try {
+			try 
+            {
 				cl = new StreamReader (FileHandler.findPath (coverTemplate));
-			} catch {
+			} 
+            catch 
+            {
 				cl = new StreamReader (FileHandler.findPath ("example.cover"));
 			}
+
 			var p = new Paragraph ();
 			string line = "";
 
-			while ((line = cl.ReadLine ()) != null) {
+			while ((line = cl.ReadLine ()) != null) 
+            {
 				var matches = Regexer.Matches (line, @"(?<=\<)(.*?)(?=\>)");
-				foreach (var v in matches)
-					line = Regexer.Replace (line, @"<" + v + @">", j.Get (v));
+                foreach (var v in matches)
+                {
+                    if (v.Contains("date"))
+                    {
+                        line = DateTime.Now.ToLongDateString();
+                        line = line.Substring(line.IndexOf(",") + 1).Trim();
+                    }
+                    line = Regexer.Replace(line, @"<" + v + @">", j.Get(v));
+                }
 				p.Add (line + n);
 			}
 
