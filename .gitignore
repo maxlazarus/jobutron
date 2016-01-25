@@ -1,5 +1,5 @@
 .log
-src/*.log
+.pyc
 .html
 .json
 .docx
