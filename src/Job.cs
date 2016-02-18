@@ -101,7 +101,7 @@ namespace jobulator
 			
             foreach (string s in jobs) 
             {
-				if (i >= limit)
+				if (i > limit)
 					break;
 				Console.Write ("Converting job " + i++ + " of " + jobs.Count + Environment.NewLine);
 				var name = System.IO.Path.GetFileName(s);

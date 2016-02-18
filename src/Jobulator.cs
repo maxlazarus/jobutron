@@ -8,7 +8,18 @@ namespace jobulator {
 
 		public Jobulator () {}
 
-		public static void Main() {
+        public static Boolean debug = false;
+
+		public static void Main(string[] args) 
+        {
+            if (args.GetLength(0) > 0)
+            {
+                if (!args[0].Equals("DEBUG"))
+                {
+
+                }
+            }
+                
 
             /*
 			var d = new Driver ();
@@ -25,7 +36,7 @@ namespace jobulator {
 
             var jobList = Job.getJobsFrom("html", 500);
 
-            GenerateWordList(jobList);
+            //GenerateWordList(jobList);
 
 			foreach (Job j in jobList) 
             {

@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace jobulator {
 	public class FileHandler {
 
-        public readonly static string
+        public static string
             slash = "",
             resPath = "",
             basePath = "",
@@ -19,7 +19,7 @@ namespace jobulator {
 			var os = System.Environment.OSVersion;
             osName = (os.ToString().Contains("Windows"))? "windows": "linux";
             slash = (osName == "windows")? "\\" : "/";
-			basePath = ".." + slash + ".." + slash;
+            basePath = ".." + slash;//".." + slash + ".." + slash;
 			resPath = basePath + "res" + slash;
 			srcPath = basePath + "src" + slash;
             binPath = basePath + "bin" + slash + osName + slash;  
@@ -66,7 +66,9 @@ namespace jobulator {
 
 		public static System.Collections.Generic.List<string> getFileNames(string extension) 
         {
-			var dir = (extension.Contains ("html")) ? "jobs" + slash : "res" + slash;
+            string dir = null;
+
+            dir = (extension.Contains("html")) ? "jobs" + slash : "res" + slash;         
 			var filePaths = Directory.EnumerateFiles (basePath + dir, "*." + extension);
 			return new System.Collections.Generic.List<string>(filePaths);
 		}
@@ -74,8 +76,8 @@ namespace jobulator {
 		public static string findPath(string s) 
         {
 			var dir = "";
-			dir = (s.Contains("html"))? "jobs" + slash: "res" + slash;
-			dir = (s.Contains("cover"))? "covers" + slash: dir;
+            dir = (s.Contains("html")) ? "jobs" + slash : "res" + slash;
+            dir = (s.Contains("cover")) ? "covers" + slash : dir;
 			return basePath + dir + s;
 		}
 	}

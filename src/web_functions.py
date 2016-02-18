@@ -25,20 +25,19 @@ except:
 import os
 from os import path
 from os import sep
+from subprocess import call
 import re
 import codecs
 import getpass
-
-#x = json.load(f) f= json.dump(x)
 
 top_level_domain = r'https://www.ubcengcore.com'
 login_path = r'/secure/shibboleth.htm'
 postings_path = r'/myAccount/co-op/postings.htm'
 upload_path = r'/myAccount/co-op/myDocuments.htm'
-image_folder_path = r'../browser_images/'
+image_folder_path = r'./browser_images/'
 
 def clear_images():
-    folder = path.dirname(__file__).join(image_folder_path)
+    folder = path.dirname(__file__) + (image_folder_path)
     for the_file in os.listdir(folder):
         file_path = os.path.join(folder, the_file)
         try:
@@ -219,7 +218,7 @@ def upload_cover(browser, numerical_id):
     print 'Uploaded cover ' + str(numerical_id)
     return browser
 
-def main():
+if __name__ == '__main__':
     from optparse import OptionParser
     parser = OptionParser()
     parser.add_option('-g', '--get', action='store_true', dest='mode')
@@ -241,7 +240,5 @@ def main():
             b = upload_cover(b, arg)
 
     disconnect(b)
+    call(["../bin/Release/jobulator.exe"])
     quit()
-
-if __name__ == '__main__':
-    main()
