@@ -29,14 +29,16 @@ from subprocess import call
 import re
 import codecs
 import getpass
+import time
 
 top_level_domain = r'https://www.ubcengcore.com'
 login_path = r'/secure/shibboleth.htm'
 postings_path = r'/myAccount/co-op/postings.htm'
 upload_path = r'/myAccount/co-op/myDocuments.htm'
-image_folder_path = r'./browser_images/'
+image_folder_path = r'../browser_images/'
 
 def clear_images():
+    '''clears all the files in the image_folder_path location'''
     folder = path.dirname(__file__) + (image_folder_path)
     for the_file in os.listdir(folder):
         file_path = os.path.join(folder, the_file)
@@ -46,6 +48,7 @@ def clear_images():
             print e
 
 def login(browser):
+    '''opens top_level_domain and attempts a login, prompting for user & pass'''
     print 'Starting login attempt'
     try:
         browser.get(top_level_domain + login_path)
@@ -78,16 +81,9 @@ def disconnect(browser):
     browser.close()
     browser.quit()
 
-import time
-
-#num of jobs in this string?
-#"//*[@id='postingsTablePlaceholder']/div/div/span[1]"
-
-#get page i of results
-#
 
 def get_browser():
-#clears images and returns a new PhantomJS Selenium webdriver object
+    '''clears images and returns a new PhantomJS Selenium webdriver object'''
     try:
         browser = webdriver.PhantomJS()
     except:
@@ -112,6 +108,7 @@ def to_job(browser, numerical_id):
     return browser
 
 def get_jobs_list(browser, page):
+    '''grabs the first page of jobs - may be broken'''
     print 'Finding job list page ' + str(page)  
     try:
         browser.get(top_level_domain + postings_path)
@@ -126,15 +123,13 @@ def get_jobs_list(browser, page):
             time.sleep(10)
             page_xpath = page_other_xpath
         browser.find_element_by_xpath(page_xpath).click()
-        #sort by expiring soonest first
-        #browser.find_element_by_xpath('//*[@id="postingsTable"]/thead/tr/th[6]/a/i').click()
         print 'Found jobs list'
         browser.save_screenshot(image_folder_path + 'post-jobs list page ' + str(page) + '.png')
     except common.exceptions.NoSuchElementException, e:
         raise ScriptFlowException
 
 def save_content_as(content, filename):
-#saves text content to disk
+    '''saves text content to disk'''
     print 'Creating ' + filename
     f = codecs.open(filename, 'w', 'utf-8')
     for line in content:      
@@ -142,7 +137,7 @@ def save_content_as(content, filename):
     f.close()
 
 def relog_in(browser):
-#try to click on 'Keep me logged in'
+    '''try to click on "Keep me logged in"'''
     try:
         logged_in_xpath = '//*[@id="keepMeLoggedInModal"]/div[3]/a[1]'
         browser.find_element_by_xpath(logged_in_xpath).click()
@@ -152,43 +147,6 @@ def relog_in(browser):
     except common.exceptions.NoSuchElementException, e:
         print e
     return browser;
-
-def scrape_HTML(browser):
-#obselete, needs updating
-    content = browser.page_source
-
-    find_posting_id_regex = re.compile('postingId=[0-9]\d*')
-    find_number_regex = re.compile('[0-9]\d*')
-    matches = find_posting_id_regex.findall(content)
-    
-    for match in matches:
-        numerical_id = find_number_regex.findall(match)[0].encode('ascii')
-
-        filepath = path.abspath(path.join(path.dirname(__file__), '..', 'jobs'))
-        filename = filepath + sep + numerical_id + '.html'
-
-        #if file does not exist yet  
-        if path.isfile(filename) is not True:
-            print 'Accessing job ' + numerical_id
-
-            #click on next job
-            try:
-                job_xpath = '//*[@id="posting' + numerical_id + '"]/td[2]/strong/a'
-                browser.find_element_by_xpath(job_xpath).click()
-            except common.exceptions.NoSuchElementException, e:
-                job_xpath = '//*[@id="posting' + numerical_id + '"]/td[2]/a[1]'
-                browser.find_element_by_xpath(job_xpath).click()
-
-            save_content_as(browser.page_source, filename)
-            browser.save_screenshot(image_folder_path + 'access attempt for job ' + numerical_id + '.png')
-            
-
-            #back to job search results
-            try:
-                return_xpath = '//*[@id="mainContentDiv"]/div[2]/div/div/div/div[2]/div/div[2]/div[3]/div/ul/li[1]/a'
-                browser.find_element_by_xpath(return_xpath).click()
-            except common.exceptions.NoSuchElementException, e:
-                raise ScriptFlowException
 
 def to_upload(browser):
     upload_button_xpath = '//*[@id="mainContentDiv"]/div[2]/div/a[1]'
@@ -228,13 +186,13 @@ if __name__ == '__main__':
     b = get_browser()
     b = login(b)
 
-    if(options.mode == True):
+    if(options.mode == True): #save jobs specified in -g
         for arg in args:
             b = to_postings(b)
             b = to_job(b, arg)
             save_content_as(b.page_source, "../jobs/" + str(arg) + ".html")
 
-    if(options.mode == False):
+    if(options.mode == False): #upload jobs (non-functional)
         for arg in args:
             b = to_upload(b)
             b = upload_cover(b, arg)
